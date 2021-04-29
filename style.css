@@ -68,6 +68,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 header .logo {
@@ -77,6 +84,10 @@ header .logo {
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 2px;
+}
+
+header.sticky .logo {
+    color: #111;
 }
 
 header ul {
@@ -95,6 +106,10 @@ header ul li a {
     margin: 0 15px;
     color: #fff;
     text-decoration: none;
+}
+
+header.sticky ul li a {
+    color: #111;
 }
 
 /* About section */
