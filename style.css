@@ -17,7 +17,7 @@ section {
 .banner {
     position: relative;
     min-width: 100vh;
-    background: url(banner.jpg);
+    background: url(assets/images/banner.jpg);
     background-size: cover;
     background-position: right;
     display: flex;
@@ -204,6 +204,13 @@ img {
 
 .work .content .workBx img {
     max-width: 100%;
+    transition: 0.2s;
+    background: rgb(47, 47, 47);
+    border-radius: 10px;
+}
+
+.work .content .workBx img:hover {
+    filter: brightness(80%);
 }
 
 /* Testimonial section */
@@ -376,7 +383,7 @@ img {
     .toggle {
         width: 40px;
         height: 40px;
-        background: url(assets/menu.png);
+        background: url(assets/menu/open.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 30px;
@@ -384,7 +391,7 @@ img {
     }
 
     .toggle.active {
-        background: url(assets/close.png);
+        background: url(assets/menu/close.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: 25px;
