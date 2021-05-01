@@ -1,48 +1,38 @@
 import React from "react";
 
+import WorkBox from "./boxes/WorkBox";
+
 export default function Work() {
     return (
-        <article class="portfolio__block work" id="work">
-            <header class="work__heading block-heading">
-                <h2 class="block-heading__header">Przegląd projektów</h2>
-                <p class="block-heading__text">
+        <article className="portfolio__block work" id="work">
+            <header className="work__heading block-heading">
+                <h2 className="block-heading__header">Przegląd projektów</h2>
+                <p className="block-heading__text">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Ratione beatae suscipit, accusantium perferendis porro,
                     incidunt at nisi tenetur ducimus optio, architecto alias
                     sint ullam labore consequuntur! Iure inventore illo ullam.
                 </p>
             </header>
-            <div class="work__content block-content">
-                <section class="work-box">
-                    <img
-                        class="work-box__image"
-                        src={require("../../assets/work/review.svg").default}
-                        alt="review"
-                    />
-                </section>
-                <section class="work-box">
-                    <img
-                        class="work-box__image"
-                        src={require("../../assets/work/finance.svg").default}
-                        alt="finance"
-                    />
-                </section>
-                <section class="work-box">
-                    <img
-                        class="work-box__image"
-                        src={require("../../assets/work/education.svg").default}
-                        alt="education"
-                    />
-                </section>
-                <section class="work-box">
-                    <img
-                        class="work-box__image"
-                        src={require("../../assets/work/website.svg").default}
-                        alt="website"
-                    />
-                </section>
+            <div className="work__content block-content">
+                <WorkBox
+                    imagePath="assets/work/review.svg"
+                    imageDescription="review"
+                />
+                <WorkBox
+                    imagePath="assets/work/finance.svg"
+                    imageDescription="finance"
+                />
+                <WorkBox
+                    imagePath="assets/work/education.svg"
+                    imageDescription="education"
+                />
+                <WorkBox
+                    imagePath="assets/work/website.svg"
+                    imageDescription="website"
+                />
             </div>
-            <div class="work__addition block-heading">
+            <div className="work__addition block-heading">
                 <a href="#" class="button">
                     Zobacz więcej
                 </a>
