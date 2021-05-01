@@ -1,20 +1,22 @@
 import React from "react";
 
+import BlockHeading from "./heading/BlockHeading";
 import ServiceBox from "./boxes/ServiceBox";
 
 export default function Services() {
     return (
-        <article class="portfolio__block services" id="services">
-            <header class="services__heading block-heading block-heading--white">
-                <h2 class="block-heading__header">Oferowane usługi</h2>
-                <p class="block-heading__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ratione beatae suscipit, accusantium perferendis porro,
-                    incidunt at nisi tenetur ducimus optio, architecto alias
-                    sint ullam labore consequuntur! Iure inventore illo ullam.
-                </p>
-            </header>
-            <div class="services__content block-content">
+        <article className="portfolio__block services" id="services">
+            <BlockHeading
+                headingBlockClass="services__heading"
+                isHeadingWhite
+                headingTitle="Oferowane usługi"
+                headingDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione beatae suscipit, accusantium perferendis porro,
+                incidunt at nisi tenetur ducimus optio, architecto alias
+                sint ullam labore consequuntur! Iure inventore illo ullam."
+            />
+
+            <div className="services__content block-content">
                 <ServiceBox
                     imagePath="assets/service-icons/icon1.png"
                     imageDescription="icon1"

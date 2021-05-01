@@ -1,20 +1,20 @@
 import React from "react";
 
+import BlockHeading from "./heading/BlockHeading";
 import TestimonialBox from "./boxes/TestimonialBox";
 
 export default function Testimonial() {
     return (
-        <article class="portfolio__block testimonial" id="testimonial">
-            <header class="testimonial__heading block-heading">
-                <h2 class="block-heading__header">Rekomendacje</h2>
-                <p class="block-heading__text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ratione beatae suscipit, accusantium perferendis porro,
-                    incidunt at nisi tenetur ducimus optio, architecto alias
-                    sint ullam labore consequuntur! Iure inventore illo ullam.
-                </p>
-            </header>
-            <div class="testimonial__content block-content">
+        <article className="portfolio__block testimonial" id="testimonial">
+            <BlockHeading
+                headingBlockClass="testimonial__heading"
+                headingTitle="Rekomendacje"
+                headingDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Ratione beatae suscipit, accusantium perferendis porro,
+                incidunt at nisi tenetur ducimus optio, architecto alias
+                sint ullam labore consequuntur! Iure inventore illo ullam."
+            />
+            <div className="testimonial__content block-content">
                 <TestimonialBox
                     testimonialContent="Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Unde voluptatibus enim in odio labore voluptas
