@@ -4,6 +4,7 @@ import About from "../blocks/About";
 import Services from "../blocks/Services";
 import Work from "../blocks/Work";
 import Testimonial from "../blocks/Testimonial";
+import Contact from "../blocks/Contact";
 
 export default function Main() {
     return (
@@ -17,6 +18,8 @@ export default function Main() {
             <Work />
 
             <Testimonial />
+
+            <Contact />
         </main>
     );
 }
