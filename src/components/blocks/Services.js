@@ -1,5 +1,7 @@
 import React from "react";
 
+import ServiceBox from "./boxes/ServiceBox";
+
 export default function Services() {
     return (
         <article class="portfolio__block services" id="services">
@@ -13,102 +15,65 @@ export default function Services() {
                 </p>
             </header>
             <div class="services__content block-content">
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon1.png").default
-                        }
-                        alt="icon1"
-                    />
-                    <h2 class="service-box__header">Web Design</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <ServiceBox
+                    imagePath="assets/service-icons/icon1.png"
+                    imageDescription="icon1"
+                    serviceTitle="Web Design"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon2.png").default
-                        }
-                        alt="icon2"
-                    />
-                    <h2 class="service-box__header">Web Development</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        possimus in dicta sunt delectus laborum iusto."
+                />
+
+                <ServiceBox
+                    imagePath="assets/service-icons/icon2.png"
+                    imageDescription="icon2"
+                    serviceTitle="Web Development"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon3.png").default
-                        }
-                        alt="icon3"
-                    />
-                    <h2 class="service-box__header">Android App</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        possimus in dicta sunt delectus laborum iusto."
+                />
+
+                <ServiceBox
+                    imagePath="assets/service-icons/icon3.png"
+                    imageDescription="icon3"
+                    serviceTitle="Android App"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon4.png").default
-                        }
-                        alt="icon4"
-                    />
-                    <h2 class="service-box__header">Photography</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        possimus in dicta sunt delectus laborum iusto."
+                />
+
+                <ServiceBox
+                    imagePath="assets/service-icons/icon4.png"
+                    imageDescription="icon4"
+                    serviceTitle="Photography"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon5.png").default
-                        }
-                        alt="icon5"
-                    />
-                    <h2 class="service-box__header">Content Writing</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        possimus in dicta sunt delectus laborum iusto."
+                />
+
+                <ServiceBox
+                    imagePath="assets/service-icons/icon5.png"
+                    imageDescription="icon5"
+                    serviceTitle="Content Writing"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
-                <section class="service-box">
-                    <img
-                        class="service-box__image"
-                        src={
-                            require("../../assets/service-icons/icon6.png").default
-                        }
-                        alt="icon6"
-                    />
-                    <h2 class="service-box__header">Video Editing</h2>
-                    <p class="service-box__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        possimus in dicta sunt delectus laborum iusto."
+                />
+
+                <ServiceBox
+                    imagePath="assets/service-icons/icon6.png"
+                    imageDescription="icon6"
+                    serviceTitle="Video Editing"
+                    serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Mollitia tempora, quisquam modi porro nemo ullam quos
                         dolores eos quidem, iure doloribus repudiandae nam
-                        possimus in dicta sunt delectus laborum iusto.
-                    </p>
-                </section>
+                        possimus in dicta sunt delectus laborum iusto."
+                />
             </div>
         </article>
     );
