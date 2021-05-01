@@ -1,0 +1,35 @@
+@import "../base/variables";
+
+/* Site HEADER */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.site-header.sticky {
+    background: $light-color;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.site-header__logo {
+    color: $light-color;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.site-header.sticky .site-header__logo {
+    color: $dark-color;
+}

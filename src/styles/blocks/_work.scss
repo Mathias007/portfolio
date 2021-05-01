@@ -1,0 +1,27 @@
+@import "../base/variables";
+
+/* Portfolio WORK Block */
+
+.work__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Work box */
+
+.work-box {
+    width: 50%;
+    padding: 20px;
+}
+
+.work-box__image {
+    max-width: 100%;
+    transition: 0.2s;
+    background: rgb(47, 47, 47);
+    border-radius: 10px;
+}
+
+.work-box__image:hover {
+    filter: brightness(80%);
+}

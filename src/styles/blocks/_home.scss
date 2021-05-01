@@ -1,0 +1,33 @@
+@import "../base/variables";
+
+/* Portfolio HOME Block */
+
+.home {
+    position: relative;
+    min-width: 100vh;
+    background: url("../../assets/images/banner.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__header {
+    font-size: 3em;
+    color: $light-color;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.home__author {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.home__subheader {
+    font-size: 1.5em;
+    color: $light-color;
+    font-weight: 500;
+    line-height: 1.5em;
+}

@@ -1,0 +1,25 @@
+@import "../base/variables";
+
+/* NAVIGATION (inside Header) */
+
+.navigation__list {
+    position: relative;
+    display: flex;
+}
+
+.navigation__element {
+    position: relative;
+    list-style: none;
+}
+
+.navigation__link {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: $light-color;
+    text-decoration: none;
+}
+
+.site-header.sticky .navigation__link {
+    color: $dark-color;
+}

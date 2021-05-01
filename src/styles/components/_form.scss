@@ -1,0 +1,50 @@
+@import "../base/variables";
+
+/* Contact FormBox */
+
+.form-box {
+    min-width: 60%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__header,
+.contact__info-header {
+    color: $light-color;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form__input,
+.form__textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    outline: none;
+    background: #222;
+    color: $light-color;
+    resize: none;
+}
+
+.form__textarea {
+    min-height: 200px;
+}
+
+.form__input::placeholder,
+.form__textarea::placeholder {
+    color: #999;
+}
+
+.form__input--submit {
+    max-width: 100px;
+    background: $main-color;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}

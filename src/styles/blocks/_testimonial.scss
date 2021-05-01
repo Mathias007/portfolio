@@ -1,0 +1,43 @@
+@import "../base/variables";
+
+/* Portfolio TESTIMONIAL Block */
+
+.testimonial {
+    background: #f7f7f7;
+}
+
+.testimonial__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Testimonial box */
+
+.testimonial-box {
+    max-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background: $main-color;
+}
+
+.testimonial-box__text {
+    color: $light-color;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.testimonial-box__meta {
+    margin-top: 40px;
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.meta__addition-info {
+    font-size: 14px;
+    font-weight: 400;
+}
