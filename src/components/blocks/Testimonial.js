@@ -1,5 +1,7 @@
 import React from "react";
 
+import TestimonialBox from "./boxes/TestimonialBox";
+
 export default function Testimonial() {
     return (
         <article class="portfolio__block testimonial" id="testimonial">
@@ -13,9 +15,8 @@ export default function Testimonial() {
                 </p>
             </header>
             <div class="testimonial__content block-content">
-                <section class="testimonial-box">
-                    <p class="testimonial-box__text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                <TestimonialBox
+                    testimonialContent="Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Unde voluptatibus enim in odio labore voluptas
                         iusto necessitatibus modi omnis aliquid iure, incidunt
                         eligendi repudiandae mollitia eveniet tenetur animi
@@ -23,18 +24,13 @@ export default function Testimonial() {
                         mollitia non, cum quasi. Laboriosam eos aliquam nulla
                         unde, blanditiis, ex perspiciatis molestias maxime
                         totam, natus repellat? Quibusdam ipsam corporis corrupti
-                        dolore, excepturi repellat beatae qui.
-                    </p>
-                    <h3 class="testimonial-box__meta meta">
-                        Autor Nieznany <br />
-                        <span class="meta__addition-info">
-                            Creative Designer
-                        </span>
-                    </h3>
-                </section>
-                <section class="testimonial-box">
-                    <p class="testimonial-box__text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        dolore, excepturi repellat beatae qui."
+                    authorName="Autor Nieznany"
+                    authorTitle="Creative Designer"
+                />
+
+                <TestimonialBox
+                    testimonialContent="Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Unde voluptatibus enim in odio labore voluptas
                         iusto necessitatibus modi omnis aliquid iure, incidunt
                         eligendi repudiandae mollitia eveniet tenetur animi
@@ -42,15 +38,10 @@ export default function Testimonial() {
                         mollitia non, cum quasi. Laboriosam eos aliquam nulla
                         unde, blanditiis, ex perspiciatis molestias maxime
                         totam, natus repellat? Quibusdam ipsam corporis corrupti
-                        dolore, excepturi repellat beatae qui.
-                    </p>
-                    <h3 class="testimonial-box__meta meta">
-                        Autor Nieznany <br />
-                        <span class="meta__addition-info">
-                            Creative Designer
-                        </span>
-                    </h3>
-                </section>
+                        dolore, excepturi repellat beatae qui."
+                    authorName="Autor Nieznany"
+                    authorTitle="Creative Designer"
+                />
             </div>
         </article>
     );
