@@ -2,22 +2,49 @@
 
 /* NAVIGATION (inside Header) */
 
-.navigation__list {
-    position: relative;
-    display: flex;
-}
+.navigation {
+    &__list {
+        position: relative;
+        display: flex;
 
-.navigation__element {
-    position: relative;
-    list-style: none;
-}
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            position: fixed;
+            top: 75px;
+            left: -100%;
+            display: block;
+            padding: 100px 50px;
+            text-align: center;
+            width: 100%;
+            height: 100vh;
+            background: $light-color;
+            transition: 0.5s;
+            z-index: 999;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
 
-.navigation__link {
-    position: relative;
-    display: inline-block;
-    margin: 0 15px;
-    color: $light-color;
-    text-decoration: none;
+            &.active {
+                left: 0;
+            }
+        }
+    }
+
+    &__element {
+        position: relative;
+        list-style: none;
+    }
+
+    &__link {
+        position: relative;
+        display: inline-block;
+        margin: 0 15px;
+        color: $light-color;
+        text-decoration: none;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            color: var(--dark-color);
+            font-size: 24px;
+            margin: 10px;
+        }
+    }
 }
 
 .site-header.sticky .navigation__link {

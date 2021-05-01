@@ -4,13 +4,21 @@
 
 .portfolio__block {
     padding: 100px;
+
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        padding: 100px 50px;
+    }
+
+    @media (max-width: map-get($map: $breakpoints, $key: small)) {
+        padding: 100px 20px;
+    }
 }
 
 .button {
     position: relative;
     background: $main-color;
     display: inline-block;
-    color: #fff;
+    color: $light-color;
     margin-top: 20px;
     padding: 10px 30px;
     font-size: 18px;
@@ -18,6 +26,12 @@
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 }
 
 /* Block heading and content */
@@ -27,18 +41,27 @@
     text-align: center;
     margin-bottom: 30px;
     color: $dark-color;
-}
 
-.block-heading--white {
-    color: $light-color;
-}
+    &--white {
+        color: $light-color;
+    }
 
-.block-heading__header {
-    font-weight: 600;
-    font-size: 30px;
+    &__header {
+        font-weight: 600;
+        font-size: 30px;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            font-size: 24px;
+        }
+    }
 }
 
 .block-content {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        flex-direction: column;
+        align-items: center;
+    }
 }

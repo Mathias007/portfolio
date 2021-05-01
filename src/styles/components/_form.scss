@@ -9,42 +9,41 @@
 .form {
     display: flex;
     flex-direction: column;
-}
 
-.form__header,
-.contact__info-header {
-    color: $light-color;
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-}
+    &__header {
+        color: $light-color;
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
 
-.form__input,
-.form__textarea {
-    margin-bottom: 20px;
-    padding: 15px;
-    font-size: 16px;
-    background: transparent;
-    border: none;
-    outline: none;
-    background: #222;
-    color: $light-color;
-    resize: none;
-}
+    &__input,
+    &__textarea {
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 16px;
+        background: transparent;
+        border: none;
+        outline: none;
+        background: $less-dark-color;
+        color: $light-color;
+        resize: none;
+    }
 
-.form__textarea {
-    min-height: 200px;
-}
+    &__textarea {
+        min-height: 200px;
+    }
 
-.form__input::placeholder,
-.form__textarea::placeholder {
-    color: #999;
-}
+    &__input::placeholder,
+    &__input::placeholder {
+        color: $cream-grey-color;
+    }
 
-.form__input--submit {
-    max-width: 100px;
-    background: $main-color;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    &__input--submit {
+        max-width: 100px;
+        background: $main-color;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
 }
