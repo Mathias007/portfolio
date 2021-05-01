@@ -1,3 +1,20 @@
+// COLORS
+
 $main-color: #2196f3;
 $dark-color: #111;
+$less-dark-color: #222;
 $light-color: #fff;
+$less-light-color: #f7f7f7;
+$black-color: #000;
+$cream-grey-color: #999;
+
+// PATHS
+$toggle-open-path: "../../assets/menu/open.png";
+$toggle-open-path: "../../assets/menu/close.png";
+$home-img-path: "../../assets/images/banner.jpg";
+
+// BREAKPOINTS
+$breakpoints: (
+    small: 991px,
+    medium: 600px,
+);
