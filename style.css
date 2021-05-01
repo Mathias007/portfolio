@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+    --main-color: #2196f3;
+    --dark-color: #111;
+    --light-color: #fff;
+}
+
 /* Primary RESET */
 
 * {
@@ -26,13 +32,13 @@
 }
 
 .site-header.sticky {
-    background: #fff;
+    background: var(--light-color);
     padding: 20px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 .site-header__logo {
-    color: #fff;
+    color: var(--light-color);
     font-size: 24px;
     text-transform: uppercase;
     text-decoration: none;
@@ -41,7 +47,7 @@
 }
 
 .site-header.sticky .site-header__logo {
-    color: #111;
+    color: var(--dark-color);
 }
 
 /* NAVIGATION (inside Header) */
@@ -60,12 +66,12 @@
     position: relative;
     display: inline-block;
     margin: 0 15px;
-    color: #fff;
+    color: var(--light-color);
     text-decoration: none;
 }
 
 .site-header.sticky .navigation__link {
-    color: #111;
+    color: var(--dark-color);
 }
 
 /* Portfolio universal components (inside MAIN) */
@@ -76,7 +82,7 @@
 
 .button {
     position: relative;
-    background: #2196f3;
+    background: var(--main-color);
     display: inline-block;
     color: #fff;
     margin-top: 20px;
@@ -94,11 +100,11 @@
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
-    color: #111;
+    color: var(--dark-color);
 }
 
 .block-heading--white {
-    color: #fff;
+    color: var(--light-color);
 }
 
 .block-heading__header {
@@ -126,7 +132,7 @@
 
 .home__header {
     font-size: 3em;
-    color: #fff;
+    color: var(--light-color);
     font-weight: 500;
     line-height: 1.5em;
 }
@@ -138,7 +144,7 @@
 
 .home__subheader {
     font-size: 1.5em;
-    color: #fff;
+    color: var(--light-color);
     font-weight: 500;
     line-height: 1.5em;
 }
@@ -158,14 +164,14 @@
     min-width: 50%;
 }
 
-img {
+.image {
     max-width: 100%;
 }
 
 /* Portfolio SERVICES Block */
 
 .services {
-    background: #111;
+    background: var(--dark-color);
 }
 
 .services__content {
@@ -188,7 +194,7 @@ img {
 }
 
 .service-box:hover {
-    background: #2196f3;
+    background: var(--main-color);
 }
 
 .service-box__image {
@@ -245,11 +251,11 @@ img {
     max-width: calc(50% - 40px);
     padding: 60px 40px;
     margin: 20px;
-    background: #2196f3;
+    background: var(--main-color);
 }
 
 .testimonial-box__text {
-    color: #fff;
+    color: var(--light-color);
     font-style: italic;
     font-size: 16px;
     font-weight: 300;
@@ -272,7 +278,7 @@ img {
 /* Portfolio CONTACT Block */
 
 .contact {
-    background: #111;
+    background: var(--dark-color);
 }
 
 /* Contact InfoBox */
@@ -290,7 +296,7 @@ img {
 .info-box__icon {
     min-width: 40px;
     padding-top: 4px;
-    color: #fff;
+    color: var(--light-color);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -301,14 +307,14 @@ img {
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: #fff;
+    color: var(--light-color);
     flex-direction: column;
     font-weight: 300;
 }
 
 .info-box__name {
     font-weight: 500;
-    color: #2196f3;
+    color: var(--main-color);
 }
 
 /* Contact FormBox */
@@ -324,7 +330,7 @@ img {
 
 .form__header,
 .contact__info-header {
-    color: #fff;
+    color: var(--light-color);
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -339,7 +345,7 @@ img {
     border: none;
     outline: none;
     background: #222;
-    color: #fff;
+    color: var(--light-color);
     resize: none;
 }
 
@@ -354,7 +360,7 @@ img {
 
 .form__input--submit {
     max-width: 100px;
-    background: #2196f3;
+    background: var(--main-color);
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -425,7 +431,7 @@ img {
     }
 
     .navigation__link {
-        color: #111;
+        color: var(--dark-color);
         font-size: 24px;
         margin: 10px;
     }
