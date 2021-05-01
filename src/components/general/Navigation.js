@@ -4,8 +4,8 @@ import NavElement from "./navigation/NavElement";
 
 export default function Navigation() {
     return (
-        <nav class="site-header__menu navigation">
-            <ul class="navigation__list">
+        <nav className="site-header__menu navigation">
+            <ul className="navigation__list">
                 <NavElement path="#home" title="Start" />
                 <NavElement path="#about" title="O mnie" />
                 <NavElement path="#services" title="Usługi" />

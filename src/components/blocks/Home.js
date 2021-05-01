@@ -2,16 +2,16 @@ import React from "react";
 
 export default function Home() {
     return (
-        <article class="portfolio__block home" id="home">
-            <div class="home__textbox textBx">
-                <h2 class="home__header">
+        <article className="portfolio__block home" id="home">
+            <div className="home__textbox textBx">
+                <h2 className="home__header">
                     Witaj! Nazywam się <br />
-                    <span class="home__author">Mateusz Stawowski</span>.
+                    <span className="home__author">Mateusz Stawowski</span>.
                 </h2>
-                <h3 class="home__subheader">
+                <h3 className="home__subheader">
                     Jestem Frontend Web Developerem.
                 </h3>
-                <a href="#about" class="home__button button">
+                <a href="#about" className="home__button button">
                     O mnie
                 </a>
             </div>

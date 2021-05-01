@@ -8,7 +8,7 @@ import Contact from "../blocks/Contact";
 
 export default function Main() {
     return (
-        <main class="portfolio">
+        <main className="portfolio">
             <Home />
 
             <About />
