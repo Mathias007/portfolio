@@ -5,29 +5,45 @@
 .home {
     position: relative;
     min-width: 100vh;
-    background: url("../../assets/images/banner.jpg");
+    background: url($home-img-path);
     background-size: cover;
     background-position: right;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
 
-.home__header {
-    font-size: 3em;
-    color: $light-color;
-    font-weight: 500;
-    line-height: 1.5em;
-}
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        padding: 150px 50px 100px;
+    }
 
-.home__author {
-    font-size: 1.5em;
-    font-weight: 700;
-}
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        padding: 150px 20px 100px;
+    }
 
-.home__subheader {
-    font-size: 1.5em;
-    color: $light-color;
-    font-weight: 500;
-    line-height: 1.5em;
+    &__header {
+        font-size: 3em;
+        color: $light-color;
+        font-weight: 500;
+        line-height: 1.5em;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            font-size: 1.5em;
+        }
+    }
+
+    &__author {
+        font-size: 1.5em;
+        font-weight: 700;
+    }
+
+    &__subheader {
+        font-size: 1.5em;
+        color: $light-color;
+        font-weight: 500;
+        line-height: 1.5em;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            font-size: 1em;
+        }
+    }
 }

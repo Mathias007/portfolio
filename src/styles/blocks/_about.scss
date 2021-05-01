@@ -1,16 +1,28 @@
+@import "../base/variables";
+
 /* Portfolio ABOUT Block */
 
-.about__content-box {
-    padding-right: 30px;
-}
+.about {
+    &__content-box {
+        padding-right: 30px;
+    }
 
-.about__subheader {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
+    &__subheader {
+        font-size: 24px;
+        margin-bottom: 10px;
 
-.about__image {
-    min-width: 50%;
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            font-size: 20px;
+        }
+    }
+
+    &__image {
+        min-width: 50%;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            margin-bottom: 20px;
+        }
+    }
 }
 
 .image {

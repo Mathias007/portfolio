@@ -3,13 +3,13 @@
 /* Portfolio TESTIMONIAL Block */
 
 .testimonial {
-    background: #f7f7f7;
-}
+    background: $less-light-color;
 
-.testimonial__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 /* Testimonial box */
@@ -19,22 +19,32 @@
     padding: 60px 40px;
     margin: 20px;
     background: $main-color;
-}
 
-.testimonial-box__text {
-    color: $light-color;
-    font-style: italic;
-    font-size: 16px;
-    font-weight: 300;
-}
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        max-width: calc(100%-20px);
+        padding: 40px 20px;
+        margin: 10px;
+    }
 
-.testimonial-box__meta {
-    margin-top: 40px;
-    text-align: end;
-    color: #fff;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1em;
+    &__text {
+        color: $light-color;
+        font-style: italic;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__meta {
+        margin-top: 40px;
+        text-align: end;
+        color: $light-color;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1em;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            margin-top: 20px;
+        }
+    }
 }
 
 .meta__addition-info {

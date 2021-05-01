@@ -4,37 +4,41 @@
 
 .services {
     background: $dark-color;
-}
 
-.services__content {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 }
 
 /* Service box */
 
 .service-box {
     padding: 40px 20px;
-    background: #222;
-    color: #fff;
+    background: $less-dark-color;
+    color: $light-color;
     max-width: 340px;
     margin: 20px;
     text-align: center;
     transition: 0.5s;
-}
 
-.service-box:hover {
-    background: $main-color;
-}
+    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+        margin: 10px;
+    }
 
-.service-box__image {
-    max-width: 80px;
-    filter: invert(1);
-}
+    &:hover {
+        background: $main-color;
+    }
 
-.service-box__header {
-    font-size: 20px;
-    font-weight: 600;
+    &__image {
+        max-width: 80px;
+        filter: invert(1);
+    }
+
+    &__header {
+        font-size: 20px;
+        font-weight: 600;
+    }
 }

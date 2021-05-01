@@ -4,40 +4,45 @@
 
 .contact {
     background: $dark-color;
+
+    &__info {
+        min-width: 40%;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            min-width: 40%;
+            margin: 20px 0;
+        }
+    }
 }
 
 /* Contact InfoBox */
-
-.contact__info {
-    min-width: 40%;
-}
 
 .info-box {
     position: relative;
     padding: 20px 0;
     display: flex;
-}
 
-.info-box__icon {
-    min-width: 40px;
-    padding-top: 4px;
-    color: $light-color;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 24px;
-}
+    &__icon {
+        min-width: 40px;
+        padding-top: 4px;
+        color: $light-color;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 24px;
+    }
 
-.info-box__text {
-    display: flex;
-    margin-left: 20px;
-    font-size: 16px;
-    color: $light-color;
-    flex-direction: column;
-    font-weight: 300;
-}
+    &__text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        color: $light-color;
+        flex-direction: column;
+        font-weight: 300;
+    }
 
-.info-box__name {
-    font-weight: 500;
-    color: $main-color;
+    &__name {
+        font-weight: 500;
+        color: $main-color;
+    }
 }
