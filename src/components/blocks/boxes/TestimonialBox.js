@@ -6,10 +6,16 @@ export default function TestimonialBox(props) {
     return (
         <section className="testimonial-box">
             <p className="testimonial-box__text">{testimonialContent}</p>
-            <h3 className="testimonial-box__meta meta">
-                {authorName} <br />
-                <span className="meta__addition-info">{authorTitle}</span>
-            </h3>
+            {authorName ? (
+                <h3 className="testimonial-box__meta meta">
+                    {authorName} <br />
+                    {authorTitle ? (
+                        <span className="meta__addition-info">
+                            {authorTitle}
+                        </span>
+                    ) : null}
+                </h3>
+            ) : null}
         </section>
     );
 }
