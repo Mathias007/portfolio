@@ -52,9 +52,9 @@ export default function AboutContentBox(props) {
                             />
                         ) : null}
                     </div>
-                    <p className="about__text">
+                    <div className="about__text">
                         {contentText ? ReactHtmlParser(contentText) : null}
-                    </p>
+                    </div>
                 </div>
             </section>
         );
