@@ -3,11 +3,26 @@
 /* Portfolio ABOUT Block */
 
 .about {
+    &__content {
+        flex-direction: column;
+    }
+
+    &__section {
+        margin-bottom: 10px;
+    }
+
     &__content-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding-right: 30px;
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            flex-direction: column;
+        }
     }
 
     &__subheader {
+        text-align: center;
         font-size: 24px;
         margin-bottom: 10px;
 
@@ -22,6 +37,10 @@
         @media (max-width: map-get($map: $breakpoints, $key: medium)) {
             margin-bottom: 20px;
         }
+    }
+
+    &__text {
+        text-align: justify;
     }
 }
 
