@@ -1,9 +1,11 @@
 import React from "react";
 
+import Button from "./universal/Button";
+
 export default function Home() {
     return (
         <article className="portfolio__block home" id="home">
-            <div className="home__textbox textBx">
+            <div className="home__text-box">
                 <h2 className="home__header">
                     Witaj! Nazywam się <br />
                     <span className="home__author">Mateusz Stawowski</span>.
@@ -11,9 +13,12 @@ export default function Home() {
                 <h3 className="home__subheader">
                     Jestem Frontend Web Developerem.
                 </h3>
-                <a href="#about" className="home__button button">
-                    O mnie
-                </a>
+
+                <Button
+                    className="home__button button"
+                    href="#about"
+                    text="O mnie"
+                />
             </div>
         </article>
     );

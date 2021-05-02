@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 
+import Button from "../blocks/universal/Button";
 import Navigation from "./Navigation";
 
 export default function Header() {
@@ -27,9 +28,11 @@ export default function Header() {
 
     return (
         <header className={`site-header ${isSticky ? "sticky" : ""}`}>
-            <a href="#" className="site-header__logo">
-                Portfolio
-            </a>
+            <Button
+                className="site-header__logo"
+                href="#home"
+                text="Portfolio"
+            />
             <div
                 className={`site-header__toggle ${isActive ? "active" : ""}`}
                 onClick={toggleMenu}
