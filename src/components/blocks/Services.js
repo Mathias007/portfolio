@@ -18,7 +18,7 @@ export default function Services() {
 
             <div className="services__content block-content">
                 <ServiceBox
-                    imagePath="assets/service-icons/icon1.png"
+                    imagePath="service-icons/icon1.png"
                     imageDescription="icon1"
                     serviceTitle="Web Design"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -28,7 +28,7 @@ export default function Services() {
                 />
 
                 <ServiceBox
-                    imagePath="assets/service-icons/icon2.png"
+                    imagePath="service-icons/icon2.png"
                     imageDescription="icon2"
                     serviceTitle="Web Development"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -38,7 +38,7 @@ export default function Services() {
                 />
 
                 <ServiceBox
-                    imagePath="assets/service-icons/icon3.png"
+                    imagePath="service-icons/icon3.png"
                     imageDescription="icon3"
                     serviceTitle="Android App"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -48,7 +48,7 @@ export default function Services() {
                 />
 
                 <ServiceBox
-                    imagePath="assets/service-icons/icon4.png"
+                    imagePath="service-icons/icon4.png"
                     imageDescription="icon4"
                     serviceTitle="Photography"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -58,7 +58,7 @@ export default function Services() {
                 />
 
                 <ServiceBox
-                    imagePath="assets/service-icons/icon5.png"
+                    imagePath="service-icons/icon5.png"
                     imageDescription="icon5"
                     serviceTitle="Content Writing"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,7 +68,7 @@ export default function Services() {
                 />
 
                 <ServiceBox
-                    imagePath="assets/service-icons/icon6.png"
+                    imagePath="service-icons/icon6.png"
                     imageDescription="icon6"
                     serviceTitle="Video Editing"
                     serviceDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.

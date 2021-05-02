@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from "../universal/Image";
+
 export default function ServiceBox(props) {
     const {
         imagePath,
@@ -10,10 +12,10 @@ export default function ServiceBox(props) {
 
     return (
         <section className="service-box">
-            <img
-                className="service-box__image"
-                src={require(`../../../${imagePath}`).default}
-                alt={imageDescription}
+            <Image
+                imageClass="service-box__image"
+                imagePath={imagePath}
+                imageDescription={imageDescription}
             />
             <h2 className="service-box__header">{serviceTitle}</h2>
             <p className="service-box__text">{serviceDescription}</p>
