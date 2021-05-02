@@ -22,17 +22,17 @@ export default function Contact() {
                     <h3 className="contact__info-header">Dane kontaktowe</h3>
                     <div className="contact__info-box">
                         <ContactInfoBox
-                            iconClass="fas fa-map-marker"
+                            icon="map-marker"
                             infoName="Adres"
                             infoData={`ulica \n miejscowość \n kod pocztowy`}
                         />
                         <ContactInfoBox
-                            iconClass="fas fa-phone"
+                            icon="phone"
                             infoName="Telefon"
                             infoData="211-322-455"
                         />
                         <ContactInfoBox
-                            iconClass="fas fa-envelope"
+                            icon="envelope"
                             infoName="Email"
                             infoData="test@eggg.com"
                         />
