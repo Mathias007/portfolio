@@ -40,6 +40,15 @@
         padding: 20px;
     }
 
+    &__logo {
+        color: $light-color;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
     &.sticky {
         background: $light-color;
         padding: 20px 100px;
@@ -48,7 +57,7 @@
         @media (max-width: map-get($map: $breakpoints, $key: medium)) {
             padding: 20px 50px;
 
-            .site-header__toggle {
+            & .site-header__toggle {
                 filter: invert(1);
             }
         }
@@ -57,17 +66,8 @@
             padding: 20px;
         }
 
-        .site-header__logo {
+        & .site-header__logo {
             color: $dark-color;
         }
-    }
-
-    &__logo {
-        color: $light-color;
-        font-size: 24px;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-weight: 700;
-        letter-spacing: 2px;
     }
 }
