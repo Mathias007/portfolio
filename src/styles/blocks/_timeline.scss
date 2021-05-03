@@ -1,0 +1,54 @@
+@import "../base/variables";
+
+.timeline {
+    background: $dark-color;
+
+    color: $dark-color;
+
+    &__title {
+        padding-top: 0.25em;
+    }
+
+    &__date {
+        color: rgb(201, 251, 255);
+    }
+
+    &__description {
+        margin: 1.5em 0 2em 0;
+    }
+
+    &__icon {
+        color: white;
+    }
+
+    &__button {
+        text-decoration: none;
+        padding: 0.5em 1em;
+        border-radius: 5px;
+        color: white;
+
+        &--fantasy {
+            background-color: #06d6a0;
+
+            &:hover {
+                background-color: #0ac593;
+            }
+        }
+
+        &--education {
+            background-color: #f9c74f;
+
+            &:hover {
+                background-color: #f3bc3c;
+            }
+        }
+
+        &--work {
+            background-color: red;
+
+            &:hover {
+                background-color: red;
+            }
+        }
+    }
+}
