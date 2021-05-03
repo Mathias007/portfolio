@@ -5,6 +5,7 @@ import Services from "../blocks/Services";
 import Work from "../blocks/Work";
 import Testimonial from "../blocks/Testimonial";
 import Contact from "../blocks/Contact";
+import Timeline from "../blocks/Timeline";
 
 export default function Main() {
     return (
@@ -13,9 +14,11 @@ export default function Main() {
 
             <About />
 
-            <Services />
+            <Timeline />
 
             <Work />
+
+            <Services />
 
             <Testimonial />
 

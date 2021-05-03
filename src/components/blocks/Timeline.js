@@ -8,23 +8,28 @@ import {
 
 import "react-vertical-timeline-component/style.min.css";
 
-import Icon from "../blocks/universal/Icon";
-import BlockHeading from "../blocks/heading/BlockHeading";
+import Icon from "./universal/Icon";
+import BlockHeading from "./heading/BlockHeading";
 
-import timelineElements from "./timeData";
-
-import "./timeline.css";
+import timelineElements from "../../data/timeData";
 
 export default function Timeline() {
-    const fantasyIconStyles = { background: "#06D6A0" };
-    const workIconStyles = { background: "red" };
-    const educationIconStyles = { background: "#f9c74f" };
+    const fantasyIconStyles = {
+        background: "#06D6A0",
+    };
+    const workIconStyles = {
+        background: "red",
+    };
+    const educationIconStyles = {
+        background: "#f9c74f",
+    };
 
     return (
-        <article className="portfolio__block timeline">
+        <article className="portfolio__block timeline" id="timeline">
             <BlockHeading
                 headingBlockClass="timeline__heading"
                 headingTitle="Moja historia na osi czasu"
+                isHeadingWhite
             />
             <VerticalTimeline>
                 {timelineElements.map((element) => {

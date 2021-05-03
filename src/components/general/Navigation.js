@@ -10,8 +10,9 @@ export default function Navigation(props) {
             <ul className={`navigation__list ${isActive ? "active" : ""}`}>
                 <NavElement path="#home" title="Start" />
                 <NavElement path="#about" title="O mnie" />
-                <NavElement path="#services" title="Usługi" />
+                <NavElement path="#timeline" title="Oś czasu" />
                 <NavElement path="#work" title="Projekty" />
+                <NavElement path="#services" title="Usługi" />
                 <NavElement path="#testimonial" title="Rekomendacje" />
                 <NavElement path="#contact" title="Kontakt" />
             </ul>
