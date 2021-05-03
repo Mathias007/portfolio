@@ -11,7 +11,7 @@ import "react-vertical-timeline-component/style.min.css";
 import Icon from "./universal/Icon";
 import BlockHeading from "./heading/BlockHeading";
 
-import timelineElements from "../../data/timeData";
+import { timelineElements } from "../../data/timeData";
 
 export default function Timeline() {
     const fantasyIconStyles = {

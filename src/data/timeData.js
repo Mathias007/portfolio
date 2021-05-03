@@ -1,4 +1,4 @@
-let timelineElements = [
+export const timelineElements = [
     {
         id: 1,
         title: "Początki działalności sieciowej",
@@ -192,5 +192,3 @@ let timelineElements = [
         category: "work",
     },
 ];
-
-export default timelineElements;
