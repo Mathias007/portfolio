@@ -55,7 +55,7 @@ export const timelineElements = [
         category: "fantasy",
     },
     {
-        id: 6,
+        id: 5,
         title: "Komnata Pamięci",
         location: "https://egildia.pl/forum/historia",
         site: "https://egildia.pl/forum/historia",
@@ -68,7 +68,7 @@ export const timelineElements = [
         category: "fantasy",
     },
     {
-        id: 7,
+        id: 6,
         title: "Webmastering",
         location: "",
         description: `
@@ -80,7 +80,7 @@ export const timelineElements = [
         category: "fantasy",
     },
     {
-        id: 8,
+        id: 7,
         title: "Wieża Magów Tzar",
         location: "https://egildia.pl/tzar-wortal/",
         site: "https://egildia.pl/tzar-wortal/",
@@ -95,7 +95,7 @@ export const timelineElements = [
         category: "fantasy",
     },
     {
-        id: 9,
+        id: 8,
         title: "Studia prawnicze",
         location: "Uniwersytet Jagielloński w Krakowie",
         description: `
@@ -106,7 +106,7 @@ export const timelineElements = [
         category: "education",
     },
     {
-        id: 10,
+        id: 9,
         title: "eGildia Graczy",
         location: "https://egildia.pl",
         site: "https://egildia.pl",
@@ -121,7 +121,7 @@ export const timelineElements = [
         category: "fantasy",
     },
     {
-        id: 11,
+        id: 10,
         title: "Studia administracyjne",
         location: "Uniwersytet Jagielloński w Krakowie",
         description: `
@@ -132,7 +132,7 @@ export const timelineElements = [
         category: "education",
     },
     {
-        id: 12,
+        id: 11,
         title: "Komercyjny Development - kancelarie prawne",
         location: "Katowice",
         description: `
@@ -144,7 +144,7 @@ export const timelineElements = [
     },
 
     {
-        id: 13,
+        id: 12,
         title: "Frontend Developer",
         location: "Katowice",
         description: `
@@ -155,7 +155,7 @@ export const timelineElements = [
         category: "work",
     },
     {
-        id: 14,
+        id: 13,
         title: "Asystent Sędziego",
         location: "Wojewódzki Sąd Administracyjny w Gliwicach",
         description: `
@@ -166,7 +166,7 @@ export const timelineElements = [
         category: "work",
     },
     {
-        id: 15,
+        id: 14,
         title: "Studia podyplomowe",
         location: "",
         description: `
@@ -177,7 +177,7 @@ export const timelineElements = [
         category: "education",
     },
     {
-        id: 14,
+        id: 15,
         title: "Freelance i własne projekty",
         location: "https://github.com/Mathias007",
         site: "https://github.com/Mathias007",
