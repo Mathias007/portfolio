@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
     // Contact
-    faMapMarker,
-    faPhone,
+    faHome,
     faEnvelope,
+
     // Timeline
     faEthernet,
     faDragon,
@@ -24,9 +24,16 @@ import {
     faBriefcase,
 } from "@fortawesome/free-solid-svg-icons";
 
+import {
+    faDiscord,
+    faGithub,
+    faSteam,
+    faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+
 library.add(
-    faMapMarker,
-    faPhone,
+    // fas
+    faHome,
     faEnvelope,
     faEthernet,
     faDragon,
@@ -41,7 +48,13 @@ library.add(
     faGraduationCap,
     faAward,
     faGavel,
-    faBriefcase
+    faBriefcase,
+
+    // fab
+    faDiscord,
+    faGithub,
+    faSteam,
+    faLinkedin
 );
 
 export default function Icon(props) {
