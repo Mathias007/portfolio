@@ -13,7 +13,7 @@ export default function ContactInfoBox(props) {
             <div className="info-box__text">
                 <h3 className="info-box__name">{infoName}</h3>
                 <p className="info-box__data">
-                    {infoLink ? <a href={infoData}>{infoData}</a> : infoData}
+                    {infoLink ? <a href={infoLink}>{infoData}</a> : infoData}
                 </p>
             </div>
         </section>
