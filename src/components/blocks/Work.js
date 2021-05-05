@@ -4,6 +4,8 @@ import Button from "./universal/Button";
 import BlockHeading from "./heading/BlockHeading";
 import WorkBox from "./boxes/WorkBox";
 
+import { workData } from "../../data/workData";
+
 export default function Work() {
     return (
         <article className="portfolio__block work" id="work">
