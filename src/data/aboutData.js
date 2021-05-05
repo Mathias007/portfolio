@@ -7,8 +7,8 @@ export const aboutData = [
 
         <p>Nie były to bynajmniej projekty szczególnie obszerne - moje pierwsze fora dyskusyjne dotyczyły głównie klanów prowadzonych przeze mnie w grach przeglądarkowych, które mocno przykuwały wtedy moją uwagę, a także grup podwórkowych, z którymi się za młodu trzymałem. Pozwoliło mi to jednak na zapoznanie się ze specyfiką silników <strong>phpBB</strong>, <strong>PunBB</strong>, <strong>SMF</strong> czy <strong>MyBB</strong>, sposobami ich podstawowej konfiguracji i personalizacji z poziomu panelu admina oraz bieżącym zarządzaniem (w tym językiem tagów <strong>BB-Code</strong>). Uzupełniająco tworzyłem przy tym <strong>proste strony internetowe</strong>, wykorzystujące głównie <strong>HTML </strong>i inline'owe style. Korzystałem wówczas m. in. z nierozwijanego już edytora MS FrontPage oraz naturalnie z Notatnika, natomiast obrazki modyfikowałem w Paincie. Jak na 11-letniego chłopaka, zajmującego się dotychczas raczej grą na fortepianie czy recytacją wierszy, był to chyba całkiem niezły wstęp.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/net.jpg",
+        imageDescription: "Pierwsze kroki w internecie",
     },
 
     {
@@ -19,8 +19,8 @@ export const aboutData = [
 
         <p>Forum Tajemnice Antagarichu prowadziłem <strong>do 2018 roku</strong>, a następnie w<strong> 2021 roku</strong> dokonałem jego odnowy w ramach projektu <strong><a rel="noreferrer noopener" href="https://github.com/Mathias007/tajemnice-antagarichu" data-type="URL" data-id="https://github.com/Mathias007/tajemnice-antagarichu" target="_blank">Tajemnice Antagarichu Refactored</a></strong>. W pracach nad nim korzystałem z <strong>HTML</strong>, <strong>CSS</strong>, <strong>JavaScript</strong> oraz <strong>jQuery</strong>. Z uwagi na brak bezpośredniego dostępu do serwera FTP modyfikacji dokonywałem okrężnymi drogami, co stanowiło dodatkowe wyzwanie programistyczne. W 2021 roku wprowadziłem więcej rozwiązań <strong>nowoczesnego Javascript ES6+</strong>, zastępując skrypty jQuery. Zmodernizowałem także style CSS (<strong>Flexbox, Grid, variables, Media Queries, etc.</strong>) oraz usprawniłem HTML z perspektywy semantyki oraz strukturalnej poprawności. W efekcie forum udało się znacząco zoptymalizować, pomimo że bazuje ono w dalszym ciągu na starym silniku <strong>PunBB w wersji 2</strong>.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/keyboard.jpg",
+        imageDescription: "Tajemnice Antagarichu",
     },
 
     {
@@ -31,8 +31,8 @@ export const aboutData = [
 
         <p>Do budowy wortalu wykorzystywaliśmy naturalnie <strong>HTML</strong>, <strong>CSS</strong>, <strong>Javascript</strong>, <strong>PHP</strong> oraz <strong>MySQL</strong>. Z czasem zdecydowaliśmy także o użyciu popularnego CMS <strong>Wordpress</strong>. W <strong>2017 roku</strong> strona zakończyła swój samodzielny byt, a jej zawartość została włączona w strukturę utworzonego wówczas przez mnie serwisu pod nazwą <strong><a rel="noreferrer noopener" href="https://egildia.pl" data-type="URL" data-id="https://egildia.pl" target="_blank">eGildia Graczy</a></strong> (o którym szerzej opowiem dalej).</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/wordpress.jpg",
+        imageDescription: "Kroniki Heroes - Wordpress",
     },
 
     {
@@ -41,8 +41,8 @@ export const aboutData = [
         paragraph: `
         <p>Inny projekt webowy budowany w ramach marki Tajemnice Antagarichu stanowiła <strong>Historia Forum</strong>, tj. strona internetowa archiwizująca kluczowe dane i linki w dziejach społeczności. Jej pierwsza wersja powstała już w <strong>2008 roku</strong>. Po kilku latach rozwoju stała się częścią szerszej <strong>Pałac</strong>, związanej z fabularnym wątkiem na TA, przyjmując aktualną nazwę <strong>Komnata Pamięci</strong>. <a rel="noreferrer noopener" href="https://egildia.pl/forum/historia/" data-type="URL" data-id="https://egildia.pl/forum/historia/" target="_blank"><strong>Jej najnowsza odsłona</strong></a> z <strong>2021 roku</strong> została utworzona równolegle do refactoringu forum (zob.: <strong><a rel="noreferrer noopener" href="https://github.com/Mathias007/komnata-pamieci" target="_blank">repozytorium GitHub</a></strong>).</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/archive.jpg",
+        imageDescription: "Komnata Pamięci - Archiwum",
     },
 
     {
@@ -52,8 +52,8 @@ export const aboutData = [
 
         <p>Inny ciekawy projekt stanowił <strong>wortal Wieża Magów Tzar</strong>. Zbudowany on został od podstaw w czerwcu <strong>2013 roku</strong> od podstaw w <strong>HTML</strong>, <strong>CSS</strong> i <strong>PHP</strong>, z wykorzystaniem bazy danych <strong>MySQL</strong> oraz pomniejszych skryptów <strong>JS</strong>. Oprócz statycznych treści strona obejmowała także newsy, galerię, księgę gości czy ankiety, a jej zawartość i kod były aktualizowane w kolejnych latach. W <strong>2017 roku</strong> została wcielona w ekosystem <strong>eGildii Graczy</strong>, co wiązało się m. in. z <strong>migracją na Wordpressa</strong> (zob.: <strong><a rel="noreferrer noopener" href="https://egildia.pl/tzar-wortal/" data-type="URL" data-id="https://egildia.pl/tzar-wortal/" target="_blank">obecny adres</a></strong>).</p>
     `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/network.jpg",
+        imageDescription: "Strażnicy Etherii i Wieża Magów Tzar",
     },
 
     {
@@ -62,8 +62,8 @@ export const aboutData = [
         paragraph: `
         <p>Na przełom pierwszej i drugiej dekady XXI wieku przypada znacząca popularność gier typu <strong>Play By Forum (PBF)</strong>. Oczywiście, także i w tym zakresie nie mogło zabraknąć mojej aktywności - w końcu lubię zarówno gry, jak i fora. <strong>Od 2008 do 2014</strong> <strong>roku</strong> współtworzyłem kilka PBF'ów, spośród których największy sukces osiągnęła <strong>Castella Pollona</strong> (później <strong>Castella Europa</strong>), rozgrywana na silniku <strong>phpBB (v. 2 i 3)</strong>. O względnym powodzeniu inicjatywy zadecydowało przede wszystkim zaangażowanie graczy i moderacji, zwłaszcza <strong><em>brennusa</em></strong>, który z czasem przejął po mnie pałeczkę Mistrza Gry i głównego administratora. Ciekawym pomysłem był także projekt PBF <strong>Herosi Antagarichu</strong>, osadzony w realiach Heroes 3 i rozgrywany na TA. Nadmiar obowiązków nie pozwolił mi jednak wycisnąć z niego pełni potencjału.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/connection.jpg",
+        imageDescription: "biography/connection.jpg",
     },
 
     {
@@ -74,8 +74,8 @@ export const aboutData = [
 
         <p>W tym kontekście wypada również wspomnieć o bazującym na <strong>Wordpressie</strong> portalu <strong>Gildia Mathiasa</strong>, na którym w latach <strong>2011-2018</strong> w wolnych chwilach zamieszczałem swoje przemyślenia i materiały. Początkowo dotyczyły one tematów stricte <strong>politycznych</strong>. Z czasem zacząłem również dostarczać także <strong>materiały edukacyjne czy naukowe</strong> z różnych dziedzin z kręgu moich zainteresowań (język polski, historia, wos, prawo). W niedalekiej przyszłości <strong>w planach mam zbudowanie <em>quasi</em>-platformy edukacyjnej</strong>, w której z pewnością znajdzie się miejsce dla zasobów zgromadzonych na GM, uzupełnione o wartościowe treści z zakresu <strong>prawa i programowania</strong>. Coming soon...</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/planning.jpg",
+        imageDescription: "Pozostałe projekty",
     },
 
     {
@@ -84,8 +84,8 @@ export const aboutData = [
         paragraph: `
         <p>W <strong>2014 roku</strong> rozpocząłem studia prawnicze na Uniwersytecie Jagiellońskim w Krakowie. Angażujący kierunek na uczelni poza miejscem zamieszkania wymusił na mnie w pierwszych latach ograniczenie nieprawniczej działalności. Zresztą bardzo mi się on spodobał, stąd skupiłem się głównie na studiach, mniej uwagi niż wcześniej poświęcając IT. Równolegle w świecie internetu zachodziło wówczas głębokie przemeblowanie, którego efekty są widoczne dzisiaj. Fora dyskusyjne, na których niejako ,,wychowywałem się", musiały uznać wyższość mediów społecznościowych. Techniki pisania frontendu uległy zaś znaczącym przemianom za sprawą m. in. Javscript ES6 z 2015 r. oraz coraz większej popularności frameworków czy unowocześnienia arkuszów styli. Ja w tym czasie nieco wypadłem z webdevowego obiegu, lecz dalej rozwijałem swój warsztat pisarski oraz gromadziłem projekty do szuflady. Gdy nachodziła mnie wena, pisałem książkę (powieść fantasy), choć na dobre rozkręciłem się w tym względzie w połowie 2018 roku (o czym chętnie opowiem przy innej okazji).</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/library.jpg",
+        imageDescription: "Studia prawnicze",
     },
 
     {
@@ -96,8 +96,8 @@ export const aboutData = [
 
         <p>Portal z różną częstotliwością jest rozwijany do dnia dzisiejszego. Od strony programistycznej bazuje na <strong>Wordpressie</strong>, a zatem na stacku <strong>PHP + MySQL</strong> (backend) oraz <strong>HTML + CSS + JavaScript</strong> (frontend).</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/game.jpg",
+        imageDescription: "eGildia Graczy",
     },
 
     {
@@ -110,8 +110,8 @@ export const aboutData = [
 
         <p>Z takim bagażem wiedzy, tuż po ukończeniu studiów prawniczych, podjąłem w <strong>lipcu 2019 roku</strong> pierwszą pracę <strong>na stanowisku Frontend Developera w software house</strong>, gdzie pracowałem nad projektami opartymi o <strong>React.js</strong> oraz <strong>React Native</strong>. W codziennych czynnościach posługiwałem się systemem operacyjnym <strong>Linux</strong>. Zaznajomiłem się także z <strong>Dockerem</strong>. Ponieważ firma stosowała <strong>SCRUM</strong> oraz <strong>Kanban</strong>, mogłem zobaczyć, jak funkcjonują one w praktyce.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/development.jpg",
+        imageDescription: "Praca Frontend Developera",
     },
 
     {
@@ -122,8 +122,8 @@ export const aboutData = [
 
         <p>Technologicznie projekt eGildia 2.0 bazuje od strony frontendu na <strong>React.js</strong> z <strong>Reduxem</strong>, wzbogaconym o komponenty biblioteki <strong>Ant Design</strong>. Z kolei backend, z który klient komunikuje się przez <strong>Rest API</strong>, oparty został na <strong>Node.js </strong>we frameworku <strong>Express</strong>, ktory łączy się nierelacyjną bazą danych <strong>MongoDB</strong>. Postępy prac śledzić można na <strong><a rel="noreferrer noopener" href="https://github.com/Mathias007/egildia" data-type="URL" data-id="https://github.com/Mathias007/egildia" target="_blank">Githubie</a></strong>. Tam też znajduje się dokumentacja projektu, przedstawiająca bliżej moje koncepcje.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/frontend.jpg",
+        imageDescription: "Własne projekty",
     },
 
     {
@@ -134,8 +134,8 @@ export const aboutData = [
 
         <p>Równocześnie jednak nie porzuciłem swoich planów programistycznych, a IT pozostawało dla mnie sektorem docelowym po uspokojeniu się sytuacji. Siłą rzeczy miałem teraz mniej czasu na pisanie kodu, lecz praca asystenta sędziego okazała się cennym doświadczeniem. Mogłem bowiem wziąć udział w procesach związanych z <strong>informatyzacją funkcjonowania</strong>, poznać od strony praktycznej takie narzędzia jak <strong>ePUAP</strong>, <strong>EZD</strong> czy <strong>PASSA</strong>, w tym również problemy związane z ich wdrażaniem. Nadto zagłębiłem się w materię podatkową i na tej kanwie zacząłem planowanie kolejnych projektów programistycznych. Udoskonalałem także swoje zdolności analityczne oraz umiejętność sprawnego wyszukiwania informacji.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/lawyer.jpg",
+        imageDescription: "Praca asystenta sędziego",
     },
 
     {
@@ -146,7 +146,7 @@ export const aboutData = [
 
         <p>W <strong>marcu 2021 roku</strong> podjąłem się studiów <strong>podyplomowych</strong> o tematyce programistycznej. Jest to niejako preludium do studiów <strong>inżynierskich</strong>, które zamierzam zacząć w dalszej kolejności. W międzyczasie podejmuję aktywne starania w celu zdobycia <strong>zatrudnienia w sektorze IT</strong>, aby w ten sposób rozpocząć kolejny etap drogi, którą rozpocząłem kilkanaście lat temu. Etap w pełni profesjonalnego programowania.</p>
         `,
-        imagePath: "images/img1.jpg",
-        imageDescription: "img1",
+        imagePath: "biography/code.jpg",
+        imageDescription: "Kierunek Programista",
     },
 ];
