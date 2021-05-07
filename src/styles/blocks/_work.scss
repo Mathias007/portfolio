@@ -13,10 +13,34 @@
 .work-box {
     width: 50%;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--more {
+        max-width: 33%;
+    }
 
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         width: 100%;
         padding: 10px;
+    }
+
+    &__title {
+        border: 0;
+        position: relative;
+        background: #f9c74f;
+        display: inline-block;
+        color: $light-color;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border-radius: 10px 10px 0 0;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 500;
     }
 
     &__image {

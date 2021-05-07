@@ -15,6 +15,7 @@
 }
 
 .button {
+    border: 0;
     position: relative;
     background: $main-color;
     display: inline-block;
@@ -26,11 +27,24 @@
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #0ac593;
+    }
+
+    &:active {
+        filter: brightness(0.9);
+    }
 
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         margin-top: 10px;
         padding: 10px 20px;
         font-size: 16px;
+    }
+
+    &--work {
+        margin-top: 0;
     }
 }
 
