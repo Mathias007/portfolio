@@ -5,6 +5,7 @@ export const workData = [
         projectPreview: "http://herosy3.pun.pl",
         projectCode: "tajemnice-antagarichu",
         projectCategory: "website",
+        projectImage: "work/review.svg",
     },
 
     {
@@ -12,6 +13,8 @@ export const workData = [
         projectTitle: "eGildia Graczy",
         projectPreview: "https://egildia.pl",
         projectCategory: "website",
+        projectImage: "work/finance.svg",
+        projectCode: "egildia",
     },
 
     {
@@ -19,6 +22,7 @@ export const workData = [
         projectTitle: "Strażnicy Etherii",
         projectPreview: "http://wb2.pun.pl",
         projectCategory: "website",
+        projectImage: "work/education.svg",
     },
 
     {
@@ -27,79 +31,46 @@ export const workData = [
         projectPreview: "https://egildia.pl/forum/historia",
         projectCode: "komnata-pamieci",
         projectCategory: "website",
+        projectImage: "work/website.svg",
     },
 
     {
         id: 5,
-        projectTitle: "eGildia 2.0",
-        projectCode: "egildia",
-        projectCategory: "big-project",
-    },
-    {
-        id: 6,
-        projectTitle: "shop-app",
-        projectCode: "shop-app",
-        projectCategory: "big-project",
-    },
-
-    {
-        id: 7,
-        projectTitle: "react-snake",
-        projectCode: "react-snake",
-        projectCategory: "react-project",
-    },
-
-    {
-        id: 8,
-        projectTitle: "tic-tac-toe",
-        projectCode: "tic-tac-toe",
-        projectCategory: "clean-js-project",
-    },
-
-    {
-        id: 9,
-        projectTitle: "bank-algorithm",
-        projectCode: "bank-algorithm",
-        projectCategory: "clean-js-project",
-    },
-
-    {
-        id: 1,
         projectTitle: "wisielec",
         projectPreview: "wisielec/index.html",
         projectCode: "wisielec",
         projectCategory: "oop-game",
     },
     {
-        id: 10,
+        id: 6,
         projectTitle: "arkanoid",
         projectPreview: "arkanoid/index.html",
         projectCode: "arkanoid",
         projectCategory: "oop-game",
     },
     {
-        id: 11,
+        id: 7,
         projectTitle: "spaceship",
         projectPreview: "spaceship/index.html",
         projectCode: "spaceship",
         projectCategory: "oop-game",
     },
     {
-        id: 12,
+        id: 8,
         projectTitle: "saper",
         projectPreview: "saper/index.html",
         projectCode: "saper",
         projectCategory: "oop-game",
     },
     {
-        id: 13,
+        id: 9,
         projectTitle: "diamonds",
         projectPreview: "diamonds/index.html",
         projectCode: "diamonds",
         projectCategory: "oop-game",
     },
     {
-        id: 14,
+        id: 10,
         projectTitle: "blackjack",
         projectPreview: "blackjack/index.html",
         projectCode: "blackjack",
@@ -107,133 +78,133 @@ export const workData = [
     },
 
     {
-        id: 15,
+        id: 11,
         projectTitle: "animated-navigation",
         projectPreview: "animated-navigation/index.html",
         projectCode: "animated-navigation",
         projectCategory: "clean-js-project",
     },
     {
-        id: 16,
+        id: 12,
         projectTitle: "animated-template",
         projectPreview: "animated-template/index.html",
         projectCode: "animated-template",
         projectCategory: "clean-js-project",
     },
     {
-        id: 17,
+        id: 13,
         projectTitle: "book-keeper",
         projectPreview: "book-keeper/index.html",
         projectCode: "book-keeper",
         projectCategory: "clean-js-project",
     },
     {
-        id: 18,
+        id: 14,
         projectTitle: "calculator",
         projectPreview: "calculator/index.html",
         projectCode: "calculator",
         projectCategory: "clean-js-project",
     },
     {
-        id: 19,
+        id: 15,
         projectTitle: "countdown",
         projectPreview: "countdown/index.html",
         projectCode: "countdown",
         projectCategory: "clean-js-project",
     },
     {
-        id: 20,
+        id: 16,
         projectTitle: "custom-countdown",
         projectPreview: "custom-countdown/index.html",
         projectCode: "custom-countdown",
         projectCategory: "clean-js-project",
     },
     {
-        id: 21,
+        id: 17,
         projectTitle: "exchange",
         projectPreview: "exchange/index.html",
         projectCode: "exchange",
         projectCategory: "clean-js-project",
     },
     {
-        id: 22,
+        id: 18,
         projectTitle: "form-validation",
         projectPreview: "form-validation/index.html",
         projectCode: "form-validation",
         projectCategory: "clean-js-project",
     },
     {
-        id: 23,
+        id: 19,
         projectTitle: "infinity-scroll",
         projectPreview: "infinity-scroll/index.htmll",
         projectCode: "infinity-scroll",
         projectCategory: "clean-js-project",
     },
     {
-        id: 24,
+        id: 20,
         projectTitle: "joke-teller",
         projectPreview: "joke-teller/index.html",
         projectCode: "joke-teller",
         projectCategory: "clean-js-project",
     },
     {
-        id: 25,
+        id: 21,
         projectTitle: "js-paint",
         projectPreview: "js-paint/index.html",
         projectCode: "js-paint",
         projectCategory: "clean-js-project",
     },
     {
-        id: 26,
+        id: 22,
         projectTitle: "light-and-dark",
         projectPreview: "light-and-dark/index.html",
         projectCode: "light-and-dark",
         projectCategory: "clean-js-project",
     },
     {
-        id: 27,
+        id: 23,
         projectTitle: "magic-ball",
         projectPreview: "magic-ball/index.html",
         projectCode: "magic-ball",
         projectCategory: "clean-js-project",
     },
     {
-        id: 1,
+        id: 24,
         projectTitle: "manager",
         projectPreview: "manager/index.html",
         projectCode: "manager",
         projectCategory: "clean-js-project",
     },
     {
-        id: 28,
+        id: 25,
         projectTitle: "math-sprint-game",
         projectPreview: "math-sprint-game/index.html",
         projectCode: "math-sprint-game",
         projectCategory: "clean-js-project",
     },
     {
-        id: 29,
+        id: 26,
         projectTitle: "my-notes",
         projectPreview: "my-notes/index.html",
         projectCode: "my-notes",
         projectCategory: "clean-js-project",
     },
     {
-        id: 30,
+        id: 27,
         projectTitle: "napiwki",
         projectPreview: "napiwki/index.html",
         projectCode: "napiwki",
         projectCategory: "clean-js-project",
     },
     {
-        id: 31,
+        id: 28,
         projectTitle: "nasa-apod",
         projectPreview: "nasa-apod/index.html",
         projectCode: "nasa-apod",
         projectCategory: "clean-js-project",
     },
     {
-        id: 32,
+        id: 29,
         projectTitle: "picture-in-picture",
         projectPreview: "picture-in-picture/index.html",
         projectCode: "picture-in-picture",
@@ -241,7 +212,7 @@ export const workData = [
     },
 
     {
-        id: 33,
+        id: 30,
         projectTitle: "pong-game",
         projectPreview: "pong-game/index.html",
         projectCode: "pong-game",
@@ -249,7 +220,7 @@ export const workData = [
     },
 
     {
-        id: 34,
+        id: 31,
         projectTitle: "quotes",
         projectPreview: "quotes/index.html",
         projectCode: "quotes",
@@ -257,7 +228,7 @@ export const workData = [
     },
 
     {
-        id: 35,
+        id: 32,
         projectTitle: "register-form",
         projectPreview: "register-form/index.html",
         projectCode: "register-form",
@@ -265,7 +236,7 @@ export const workData = [
     },
 
     {
-        id: 36,
+        id: 33,
         projectTitle: "splash-page",
         projectPreview: "splash-page/index.html",
         projectCode: "splash-page",
@@ -273,7 +244,7 @@ export const workData = [
     },
 
     {
-        id: 37,
+        id: 34,
         projectTitle: "spock-rock-game",
         projectPreview: "spock-rock-game/index.html",
         projectCode: "spock-rock-game",
@@ -281,7 +252,7 @@ export const workData = [
     },
 
     {
-        id: 38,
+        id: 35,
         projectTitle: "stoper",
         projectPreview: "stoper/index.html",
         projectCode: "stoper",
@@ -289,7 +260,7 @@ export const workData = [
     },
 
     {
-        id: 39,
+        id: 36,
         projectTitle: "todo-advanced",
         projectPreview: "todo-advanced/index.html",
         projectCode: "todo-advanced",
@@ -297,7 +268,7 @@ export const workData = [
     },
 
     {
-        id: 40,
+        id: 37,
         projectTitle: "wyszukiwarka",
         projectPreview: "wyszukiwarka/index.html",
         projectCode: "wyszukiwarka",
@@ -305,7 +276,7 @@ export const workData = [
     },
 
     {
-        id: 41,
+        id: 38,
         projectTitle: "Video Player",
         projectPreview: "video-player/index.html",
         projectCode: "video-player",
@@ -313,7 +284,7 @@ export const workData = [
     },
 
     {
-        id: 42,
+        id: 39,
         projectTitle: "RoboConsole",
         projectPreview: "robo-console",
         projectCode: "robo-console",
@@ -321,7 +292,7 @@ export const workData = [
     },
 
     {
-        id: 43,
+        id: 40,
         projectTitle: "Custom Scroller",
         projectPreview: "custom-scroller",
         projectCode: "custom-scroller",
@@ -329,7 +300,7 @@ export const workData = [
     },
 
     {
-        id: 44,
+        id: 41,
         projectTitle: "Spring Ball Anim",
         projectPreview: "spring-ball-anim",
         projectCode: "spring-ball-anim",
@@ -337,7 +308,7 @@ export const workData = [
     },
 
     {
-        id: 45,
+        id: 42,
         projectTitle: "Stars on Sky",
         projectPreview: "stars-on-sky",
         projectCode: "stars-on-sky",
@@ -345,30 +316,58 @@ export const workData = [
     },
 
     {
-        id: 46,
+        id: 43,
         projectTitle: "responsive-nutrition-app",
         projectCode: "responsive-nutrition-app",
         projectCategory: "elder-js-project",
     },
 
     {
-        id: 47,
+        id: 44,
         projectTitle: "bootstrap-shop",
         projectCode: "bootstrap-shop",
         projectCategory: "elder-js-project",
     },
 
     {
-        id: 48,
+        id: 45,
         projectTitle: "dog-api-handler",
         projectCode: "dog-api-handler",
         projectCategory: "elder-js-project",
     },
 
     {
-        id: 49,
+        id: 46,
         projectTitle: "image-special-slider",
         projectCode: "image-special-slider",
         projectCategory: "elder-js-project",
+    },
+
+    {
+        id: 47,
+        projectTitle: "shop-app",
+        projectCode: "shop-app",
+        projectCategory: "big-project",
+    },
+
+    {
+        id: 48,
+        projectTitle: "react-snake",
+        projectCode: "react-snake",
+        projectCategory: "react-project",
+    },
+
+    {
+        id: 49,
+        projectTitle: "tic-tac-toe",
+        projectCode: "tic-tac-toe",
+        projectCategory: "clean-js-project",
+    },
+
+    {
+        id: 50,
+        projectTitle: "bank-algorithm",
+        projectCode: "bank-algorithm",
+        projectCategory: "clean-js-project",
     },
 ];
