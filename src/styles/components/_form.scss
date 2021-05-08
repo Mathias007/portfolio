@@ -30,12 +30,17 @@
         resize: none;
     }
 
+    &__input:focus,
+    &__textarea:focus {
+        background-color: $less-light-color;
+    }
+
     &__textarea {
         min-height: 200px;
     }
 
     &__input::placeholder,
-    &__input::placeholder {
+    &__textarea::placeholder {
         color: $cream-grey-color;
     }
 

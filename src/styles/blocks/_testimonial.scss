@@ -3,8 +3,6 @@
 /* Portfolio TESTIMONIAL Block */
 
 .testimonial {
-    background: $less-light-color;
-
     &__content {
         display: flex;
         justify-content: center;
@@ -20,6 +18,14 @@
     padding: 60px 40px;
     margin: 20px;
     background: $main-color;
+    color: #000;
+    color: $light-color;
+    text-align: justify;
+    border-radius: 10px;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
 
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         max-width: calc(100%-20px);
@@ -28,16 +34,14 @@
     }
 
     &__text {
-        color: $light-color;
         font-style: italic;
-        font-size: 16px;
+        font-size: 1.3em;
         font-weight: 300;
     }
 
     &__meta {
         margin-top: 40px;
         text-align: end;
-        color: $light-color;
         font-weight: 600;
         font-size: 20px;
         line-height: 1em;
