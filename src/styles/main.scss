@@ -8,11 +8,12 @@
 
 @import "./components/block.scss";
 @import "./components/form.scss";
+@import "./components/loading.scss";
 
-@import "./blocks/about.scss";
-@import "./blocks/contact.scss";
 @import "./blocks/home.scss";
-@import "./blocks/services.scss";
-@import "./blocks/testimonial.scss";
+@import "./blocks/about.scss";
 @import "./blocks/timeline.scss";
+@import "./blocks/services.scss";
 @import "./blocks/work.scss";
+@import "./blocks/testimonial.scss";
+@import "./blocks/contact.scss";

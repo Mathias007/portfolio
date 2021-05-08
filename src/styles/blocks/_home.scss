@@ -9,18 +9,22 @@
     background-size: cover;
     background-position: right;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         padding: 150px 50px 100px;
     }
 
-    @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+    @media (max-width: map-get($map: $breakpoints, $key: small)) {
         padding: 150px 20px 100px;
     }
 
     &__text-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         animation-name: showTextBox;
         animation-duration: 3s;
     }

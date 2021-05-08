@@ -5,6 +5,13 @@
 .services {
     background: $dark-color;
 
+    &__heading p {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 10px;
+        background: $less-dark-color;
+    }
+
     &__content {
         display: flex;
         justify-content: center;
@@ -34,7 +41,6 @@
 
     &__image {
         max-width: 80px;
-        // filter: invert(1);
     }
 
     &__header {
