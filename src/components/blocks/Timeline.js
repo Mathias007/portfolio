@@ -14,16 +14,6 @@ import BlockHeading from "./heading/BlockHeading";
 import { timelineElements } from "../../data/timeData";
 
 export default function Timeline() {
-    const fantasyIconStyles = {
-        background: "#06D6A0",
-    };
-    const workIconStyles = {
-        background: "red",
-    };
-    const educationIconStyles = {
-        background: "#f9c74f",
-    };
-
     return (
         <article className="portfolio__block timeline" id="timeline">
             <BlockHeading
@@ -55,12 +45,12 @@ export default function Timeline() {
                             key={id}
                             date={date}
                             dateClassName="timeline__date"
-                            iconStyle={
+                            iconClassName={
                                 category === "work"
-                                    ? workIconStyles
+                                    ? "timeline__icon--work"
                                     : category === "education"
-                                    ? educationIconStyles
-                                    : fantasyIconStyles
+                                    ? "timeline__icon--education"
+                                    : "timeline__icon--fantasy"
                             }
                             icon={
                                 <Icon icon={icon} className="timeline__icon" />
