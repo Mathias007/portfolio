@@ -10,7 +10,7 @@
     }
 
     &__date {
-        color: rgb(201, 251, 255);
+        color: $less-light-color;
     }
 
     &__description {
@@ -18,37 +18,62 @@
     }
 
     &__icon {
-        color: white;
+        color: $light-color;
+
+        &--fantasy {
+            background-color: $green-color;
+        }
+
+        &--education {
+            background-color: $orange-color;
+        }
+
+        &--work {
+            background: $red-color;
+        }
     }
 
     &__button {
         text-decoration: none;
         padding: 0.5em 1em;
         border-radius: 5px;
-        color: white;
+        color: $light-color;
 
         &--fantasy {
-            background-color: #06d6a0;
+            background-color: $green-color;
 
             &:hover {
-                background-color: #0ac593;
+                filter: brightness(90%);
             }
         }
 
         &--education {
-            background-color: #f9c74f;
+            background-color: $orange-color;
 
             &:hover {
-                background-color: #f3bc3c;
+                filter: brightness(90%);
             }
         }
 
         &--work {
-            background-color: red;
+            background: $red-color;
 
             &:hover {
-                background-color: red;
+                filter: brightness(90%);
             }
         }
     }
+}
+
+.vertical-timeline-element-icon svg {
+    margin-left: 0;
+    margin-top: 0;
+    transform: translate(-50%, -50%);
+}
+
+.vertical-timeline-element-content.bounce-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
