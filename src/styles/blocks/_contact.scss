@@ -52,4 +52,13 @@
         font-weight: 500;
         color: $main-color;
     }
+
+    &__link {
+        color: $light-color;
+        font-weight: 700;
+
+        &:hover {
+            filter: brightness(80%);
+        }
+    }
 }

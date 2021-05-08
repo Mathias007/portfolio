@@ -20,6 +20,20 @@
         padding: 150px 20px 100px;
     }
 
+    &__text-box {
+        animation-name: showTextBox;
+        animation-duration: 3s;
+    }
+
+    @keyframes showTextBox {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     &__header {
         font-size: 3em;
         color: $light-color;

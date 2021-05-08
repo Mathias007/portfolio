@@ -30,6 +30,10 @@
     &__element {
         position: relative;
         list-style: none;
+
+        &:hover {
+            filter: brightness(80%);
+        }
     }
 
     &__link {

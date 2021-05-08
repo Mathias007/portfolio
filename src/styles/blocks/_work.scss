@@ -30,7 +30,7 @@
     &__title {
         border: 0;
         position: relative;
-        background: #f9c74f;
+        background: $orange-color;
         display: inline-block;
         color: $light-color;
         margin-top: 20px;
@@ -46,7 +46,7 @@
     &__image {
         max-width: 100%;
         transition: 0.2s;
-        background: rgb(47, 47, 47);
+        background: $green-color;
         border-radius: 10px;
 
         &:hover {
