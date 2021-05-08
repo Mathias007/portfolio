@@ -19,7 +19,7 @@ Właściwa część portfolio zbudowana jest z **bloków** (tagi html ***article
  3. Oś czasu (**Timeline**).
  4. Projekty (**Work**).
  5. Usługi/Technologie (**Services**).
- 6. Rekomendacje (**Testimonial**).
+ 6. Inspiracje (**Testimonial**).
  7. Kontakt (**Contact**).
 
 ### III. Footer.
@@ -27,7 +27,7 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 
 ## Harmonogram prac
 
-### Stan na dzień 5 maja 2021 r.
+### Stan na dzień 9 maja 2021 r.
 
  - [x] 1. Stworzenie struktury portfolio typu Single-Page-App (***HTML, CSS, vanilla JavaScript***).
  - [x] 2. Przebudowa HTML pod kątem ***semantyki***.
@@ -44,10 +44,15 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 - [x] 7. Przepisanie CSS na ***SCSS***, podział na pliki według bloków/komponentów.
 - [x] 8. Zastąpienie dotychczasowej logiki JavaScript nową, wykorzystującą m. in. ***React Hooks***.
 - [x] 9. Dodanie ikon (***react-font-awesome***) oraz Timeline (***react-vertical-timeline-component***).
-- [ ] 10. Dynamiczne generowanie treści na stronie.
-	- [ ] a) utworzenie plików z danymi (tablice obiektów w katalogu ***data***) - rozwiązanie tymczasowe,
-	- [ ] b) wykorzystanie ww. plików do generowania komponentów (zastosowanie m. in. metody ***map()*** oraz ***react-html-parser***),
-	- [ ] c) ew. konieczne modyfikacje komponentów.
-- [ ] 11. Rozważenie implementacji ***React Router DOM*** w związku z rozrostem aplikacji.
-- [ ] 12. Obsługa **formularza** i innych elementów tego rodzaju na stronie.
-- [ ] 13. Utworzenie **backendu**. 
+- [x] 10. Dynamiczne generowanie treści na stronie.
+	- [x] a) utworzenie plików z danymi (tablice obiektów w katalogu ***data***) - rozwiązanie tymczasowe,
+	- [x] b) wykorzystanie ww. plików do generowania komponentów (zastosowanie m. in. metody ***map()*** oraz ***react-html-parser***),
+	- [x] c) modyfikacje i rozbudowa komponentów,
+	- [x] d) aktualizacja styli.
+- [x] 11. Rozważenie implementacji ***React Router DOM*** w związku z rozrostem aplikacji.
+- [x] 12. Dodanie **loadera*, obsługa ***lazy-loading*** i ***Suspense***.
+- [ ] 13. Obsługa **formularza** i innych elementów tego rodzaju na stronie.
+- [ ] 14. Generalny przegląd i refaktoryzacja kodu.
+- [ ] 15. Utworzenie **backendu**. Niezbędne modyfikacje dostosowawcze po stronie klienta.
+- [ ] 16. Finalne poprawki i optymalizacja. Opcjonalne wdrożenie testów.
+- [ ] 17. Publikacja (deploy) ostatecznej wersji projektu. 
