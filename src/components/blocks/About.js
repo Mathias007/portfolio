@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 
 import BlockHeading from "./heading/BlockHeading";
-import AboutContentBox from "./boxes/AboutContentBox";
+import Loading from "./universal/Loading";
 
 import { aboutData } from "../../data/aboutData";
+
+const AboutContentBox = React.lazy(() => import("./boxes/AboutContentBox"));
 
 export default function About() {
     return (
@@ -24,14 +26,16 @@ export default function About() {
                     } = element;
 
                     return (
-                        <AboutContentBox
-                            id={id}
-                            key={id}
-                            contentSubheader={subheader}
-                            contentText={paragraph}
-                            imagePath={imagePath}
-                            imageDescription={imageDescription}
-                        />
+                        <Suspense fallback={<Loading />}>
+                            <AboutContentBox
+                                id={id}
+                                key={id}
+                                contentSubheader={subheader}
+                                contentText={paragraph}
+                                imagePath={imagePath}
+                                imageDescription={imageDescription}
+                            />
+                        </Suspense>
                     );
                 })}
             </div>

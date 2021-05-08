@@ -4,10 +4,10 @@ import ReactHtmlParser from "react-html-parser";
 import Image from "../universal/Image";
 
 export default function AboutContentBox(props) {
-    const [isVisible, setVisibility] = useState(false);
+    const [isHidden, setVisibility] = useState(false);
 
     const toggleContentVisibility = () => {
-        setVisibility(!isVisible);
+        setVisibility(!isHidden);
     };
 
     const {
@@ -29,7 +29,7 @@ export default function AboutContentBox(props) {
                 </h3>
                 <div
                     className={`about__content-box ${
-                        isVisible ? "about__content-box--visible" : ""
+                        isHidden ? "about__content-box--hidden" : ""
                     }`}
                 >
                     <div className="about__text">
@@ -59,7 +59,7 @@ export default function AboutContentBox(props) {
                 </h3>
                 <div
                     className={`about__content-box ${
-                        isVisible ? "about__content-box--visible" : ""
+                        isHidden ? "about__content-box--hidden" : ""
                     }`}
                 >
                     <div className="about__image">

@@ -13,7 +13,6 @@ export default function ServiceBox(props) {
                 imageDescription={imageDescription}
             />
             <h3 className="service-box__header">{imageDescription}</h3>
-            {/* <p className="service-box__text">{imageDescription}</p> */}
         </section>
     );
 }

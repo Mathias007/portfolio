@@ -1,28 +1,44 @@
-import React from "react";
-import Home from "../blocks/Home";
-import About from "../blocks/About";
-import Services from "../blocks/Services";
-import Work from "../blocks/Work";
-import Testimonial from "../blocks/Testimonial";
-import Contact from "../blocks/Contact";
-import Timeline from "../blocks/Timeline";
+import React, { Suspense } from "react";
+import { Switch, Route } from "react-router-dom";
+
+import Loading from "../blocks/universal/Loading";
+
+const Home = React.lazy(() => import("../blocks/Home"));
+const About = React.lazy(() => import("../blocks/About"));
+const Timeline = React.lazy(() => import("../blocks/Timeline"));
+const Services = React.lazy(() => import("../blocks/Services"));
+const Work = React.lazy(() => import("../blocks/Work"));
+const Testimonial = React.lazy(() => import("../blocks/Testimonial"));
+const Contact = React.lazy(() => import("../blocks/Contact"));
 
 export default function Main() {
     return (
         <main className="portfolio">
-            <Home />
-
-            <About />
-
-            <Timeline />
-
-            <Work />
-
-            <Services />
-
-            <Testimonial />
-
-            <Contact />
+            <Suspense fallback={<Loading />}>
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/timeline">
+                        <Timeline />
+                    </Route>
+                    <Route path="/work">
+                        <Work />
+                    </Route>
+                    <Route path="/services">
+                        <Services />
+                    </Route>
+                    <Route path="/inspirations">
+                        <Testimonial />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                </Switch>
+            </Suspense>
         </main>
     );
 }
