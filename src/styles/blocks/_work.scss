@@ -2,10 +2,18 @@
 
 /* Portfolio WORK Block */
 
-.work__content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.work {
+    &__heading p {
+        padding: 10px;
+        border-radius: 10px;
+        background: $light-color;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 }
 
 /* Work box */
