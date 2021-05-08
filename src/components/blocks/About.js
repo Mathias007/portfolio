@@ -26,10 +26,9 @@ export default function About() {
                     } = element;
 
                     return (
-                        <Suspense fallback={<Loading />}>
+                        <Suspense fallback={<Loading />} key={id}>
                             <AboutContentBox
                                 id={id}
-                                key={id}
                                 contentSubheader={subheader}
                                 contentText={paragraph}
                                 imagePath={imagePath}
