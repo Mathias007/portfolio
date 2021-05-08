@@ -20,10 +20,7 @@ export default function Work() {
             <BlockHeading
                 headingBlockClass="work__heading"
                 headingTitle="Przegląd projektów"
-                headingDescription="Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Ratione beatae suscipit, accusantium perferendis porro,
-                incidunt at nisi tenetur ducimus optio, architecto alias
-                sint ullam labore consequuntur! Iure inventore illo ullam."
+                headingDescription="W trosce o ciągły rozwój swoich umiejętności, a także ze względu na to, że sprawia mi to sporo frajdy, regularnie tworzę większe i mniejsze projekty z wykorzystaniem znanych mi technologii. Niektóre z nich są już rozwijane od wielu lat, inne już w niedalekiej przyszłości mogą stanowić interesujące dla użytkowników aplikacje webowe. Kod projektów zamieszczam na Githubie, dla większości z nich przygotowuję też wersje demonstracyjne (Preview), by obejrzeć efekty moich prac."
             />
 
             <div className="work__content block-content">

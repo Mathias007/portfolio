@@ -363,11 +363,4 @@ export const workData = [
         projectCode: "tic-tac-toe",
         projectCategory: "clean-js-project",
     },
-
-    {
-        id: 50,
-        projectTitle: "bank-algorithm",
-        projectCode: "bank-algorithm",
-        projectCategory: "clean-js-project",
-    },
 ];
