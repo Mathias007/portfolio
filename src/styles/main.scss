@@ -2,6 +2,13 @@
 
 @import "./base/base.scss";
 
+@import "./general/footer.scss";
+@import "./general/header.scss";
+@import "./general/navigation.scss";
+
+@import "./components/block.scss";
+@import "./components/form.scss";
+
 @import "./blocks/about.scss";
 @import "./blocks/contact.scss";
 @import "./blocks/home.scss";
@@ -9,10 +16,3 @@
 @import "./blocks/testimonial.scss";
 @import "./blocks/timeline.scss";
 @import "./blocks/work.scss";
-
-@import "./components/block.scss";
-@import "./components/form.scss";
-
-@import "./general/footer.scss";
-@import "./general/header.scss";
-@import "./general/navigation.scss";

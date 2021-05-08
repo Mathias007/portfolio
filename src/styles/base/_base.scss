@@ -19,3 +19,16 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
 }
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    filter: brightness(120%);
+    transition: all 0.3s ease-in-out;
+}
