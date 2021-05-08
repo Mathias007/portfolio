@@ -13,7 +13,7 @@ export default function Navigation(props) {
                 <NavElement path="#timeline" title="Oś czasu" />
                 <NavElement path="#work" title="Projekty" />
                 <NavElement path="#services" title="Usługi" />
-                <NavElement path="#testimonial" title="Rekomendacje" />
+                <NavElement path="#testimonial" title="Inspiracje" />
                 <NavElement path="#contact" title="Kontakt" />
             </ul>
         </nav>
