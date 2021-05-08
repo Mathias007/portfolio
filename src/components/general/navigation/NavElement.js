@@ -1,13 +1,14 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavElement(props) {
     const { path, title } = props;
 
     return (
         <li className="navigation__element">
-            <a href={path} className="navigation__link">
+            <NavLink to={path} className="navigation__link">
                 {title}
-            </a>
+            </NavLink>
         </li>
     );
 }

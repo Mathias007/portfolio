@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Button(props) {
     const { className, href, text, onClick } = props;
@@ -15,8 +16,8 @@ export default function Button(props) {
         );
     else
         return (
-            <a href={href} className={className ? className : "button"}>
+            <Link to={href} className={className ? className : "button"}>
                 {text}
-            </a>
+            </Link>
         );
 }

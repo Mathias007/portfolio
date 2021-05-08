@@ -16,7 +16,7 @@ export default function Home() {
 
                 <Button
                     className="home__button button"
-                    href="#about"
+                    href="about"
                     text="O mnie"
                 />
             </div>

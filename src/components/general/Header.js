@@ -30,7 +30,7 @@ export default function Header() {
         <header className={`site-header ${isSticky ? "sticky" : ""}`}>
             <Button
                 className="site-header__logo"
-                href="#home"
+                href="/"
                 text="Portfolio"
             />
             <div
