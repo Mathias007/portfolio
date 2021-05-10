@@ -45,13 +45,13 @@ export default function Timeline() {
                             key={id}
                             date={date}
                             dateClassName="timeline__date"
-                            iconClassName={
+                            iconClassName={`timeline__icon ${
                                 category === "work"
                                     ? "timeline__icon--work"
                                     : category === "education"
                                     ? "timeline__icon--education"
                                     : "timeline__icon--fantasy"
-                            }
+                            }`}
                             icon={
                                 <Icon icon={icon} className="timeline__icon" />
                             }
