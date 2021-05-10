@@ -31,6 +31,8 @@
     text-align: center;
     transition: 0.5s;
 
+    @include showElementMixin(3s);
+
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         margin: 10px;
     }

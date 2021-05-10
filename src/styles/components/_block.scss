@@ -82,6 +82,9 @@
             font-size: 24px;
         }
     }
+    &__text {
+        @include showElementMixin(1s);
+    }
 }
 
 .block-content {

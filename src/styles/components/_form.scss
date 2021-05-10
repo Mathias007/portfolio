@@ -51,4 +51,6 @@
         text-transform: uppercase;
         letter-spacing: 2px;
     }
+
+    @include showElementMixin(3s);
 }

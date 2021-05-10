@@ -25,17 +25,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        animation-name: showTextBox;
-        animation-duration: 3s;
-    }
 
-    @keyframes showTextBox {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+        @include showElementMixin(3s);
     }
 
     &__header {

@@ -39,6 +39,8 @@
         @media (max-width: map-get($map: $breakpoints, $key: medium)) {
             font-size: 20px;
         }
+
+        @include showElementMixin(1s);
     }
 
     &__content-box {
@@ -61,6 +63,8 @@
 
             transition: all 0.35s;
         }
+
+        @include showElementMixin(2s);
     }
 
     &__image {
@@ -80,6 +84,8 @@
                 opacity: 1;
                 box-shadow: 0 0 10px black inset;
             }
+
+            @include showElementMixin(2s);
         }
 
         @media (max-width: map-get($map: $breakpoints, $key: medium)) {

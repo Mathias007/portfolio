@@ -1,0 +1,13 @@
+@mixin showElementMixin($seconds) {
+    animation-name: showElement;
+    animation-duration: $seconds;
+
+    @keyframes showElement {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}

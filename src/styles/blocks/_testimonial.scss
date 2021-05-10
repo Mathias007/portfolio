@@ -24,6 +24,8 @@
     border-radius: 10px;
     box-shadow: $block-box-shadow;
 
+    @include showElementMixin(1s);
+
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         max-width: calc(100%-20px);
         padding: 40px 20px;

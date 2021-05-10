@@ -61,4 +61,7 @@
             filter: brightness(80%);
         }
     }
+
+    @include showElementMixin(2s);
+
 }
