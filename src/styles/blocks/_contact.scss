@@ -53,6 +53,7 @@
         color: $light-color;
         flex-direction: column;
         font-weight: 300;
+        word-break: break-word;
     }
 
     &__name {

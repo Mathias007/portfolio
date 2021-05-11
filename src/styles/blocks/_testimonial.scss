@@ -4,17 +4,20 @@
 
 .testimonial {
     &__content {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 }
 
 /* Testimonial box */
 
 .testimonial-box {
-    max-width: calc(50% - 40px);
     padding: 60px 40px;
     margin: 20px;
     background: $main-color;
@@ -27,7 +30,6 @@
     @include showElementMixin(1s);
 
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
-        max-width: calc(100%-20px);
         padding: 40px 20px;
         margin: 10px;
     }

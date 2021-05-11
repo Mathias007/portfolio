@@ -45,11 +45,18 @@
     }
 
     &__input--submit {
-        max-width: 100px;
+        width: 50%;
+        align-self: center;
         background: $main-color;
         cursor: pointer;
         text-transform: uppercase;
         letter-spacing: 2px;
+
+        &:hover,
+        &:focus {
+            background-color: $main-color;
+            filter: brightness(80%);
+        }
     }
 
     @include showElementMixin(3s);
