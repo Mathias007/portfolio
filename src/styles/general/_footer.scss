@@ -3,8 +3,18 @@
 /* COPYRIGHT footer */
 
 .copyright {
+    display: flex;
+    justify-content: space-between;
     background: $black-color;
     color: $light-color;
     text-align: center;
     padding: 10px;
+
+    &__author {
+        min-width: 90vw;
+    }
+
+    &__source {
+        margin-right: 10px;
+    }
 }

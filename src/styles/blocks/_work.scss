@@ -60,8 +60,15 @@
         &:hover {
             filter: brightness(80%);
         }
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            max-width: 60vw;
+        }
+    }
+
+    &__buttons {
+        display: flex;
     }
 
     @include showElementMixin(2s);
-
 }
