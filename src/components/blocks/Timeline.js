@@ -9,6 +9,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 
 import Icon from "./universal/Icon";
+import Button from "./universal/Button";
 import BlockHeading from "./heading/BlockHeading";
 
 import { timelineElements } from "../../data/timeData";
@@ -40,18 +41,28 @@ export default function Timeline() {
                         buttonText !== null &&
                         buttonText !== "";
 
+                    const iconClassName = `timeline__icon ${
+                        category === "work"
+                            ? "timeline__icon--work"
+                            : category === "education"
+                            ? "timeline__icon--education"
+                            : "timeline__icon--fantasy"
+                    }`;
+
+                    const buttonClassName = `button timeline__button ${
+                        category === "work"
+                            ? "timeline__button--work"
+                            : category === "education"
+                            ? "timeline__button--education"
+                            : "timeline__button--fantasy"
+                    } `;
+
                     return (
                         <VerticalTimelineElement
                             key={id}
                             date={date}
                             dateClassName="timeline__date"
-                            iconClassName={`timeline__icon ${
-                                category === "work"
-                                    ? "timeline__icon--work"
-                                    : category === "education"
-                                    ? "timeline__icon--education"
-                                    : "timeline__icon--fantasy"
-                            }`}
+                            iconClassName={iconClassName}
                             icon={
                                 <Icon icon={icon} className="timeline__icon" />
                             }
@@ -70,20 +81,13 @@ export default function Timeline() {
                                 {ReactHtmlParser(description)}
                             </p>
                             {showButton && (
-                                <a
-                                    className={`button timeline__button ${
-                                        category === "work"
-                                            ? "timeline__button--work"
-                                            : category === "education"
-                                            ? "timeline__button--education"
-                                            : "timeline__button--fantasy"
-                                    } `}
+                                <Button
+                                    className={buttonClassName}
                                     href={site}
+                                    text={buttonText}
                                     target="_blank"
                                     rel="noreferrer"
-                                >
-                                    {element.buttonText}
-                                </a>
+                                />
                             )}
                         </VerticalTimelineElement>
                     );

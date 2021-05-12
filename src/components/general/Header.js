@@ -7,12 +7,12 @@ export default function Header() {
     const [isSticky, setSticky] = useState(false);
     const [isActive, setActive] = useState(false);
 
-    const toggleStickyHeader = () => {
-        if (window.scrollY > 0) setSticky(!isSticky);
-        else setSticky(isSticky);
-    };
-
     useEffect(() => {
+        const toggleStickyHeader = () => {
+            if (window.scrollY > 0) setSticky(!isSticky);
+            else setSticky(isSticky);
+        };
+
         function watchScroll() {
             window.addEventListener("scroll", toggleStickyHeader);
         }
@@ -20,23 +20,19 @@ export default function Header() {
         return () => {
             window.removeEventListener("scroll", toggleStickyHeader);
         };
-    }, []);
+    }, [isSticky]);
 
     const toggleMenu = () => {
         setActive(!isActive);
     };
 
+    const headerClassName = `site-header ${isSticky ? "sticky" : ""}`;
+    const toggleClassName = `site-header__toggle ${isActive ? "active" : ""}`;
+
     return (
-        <header className={`site-header ${isSticky ? "sticky" : ""}`}>
-            <Button
-                className="site-header__logo"
-                href="/"
-                text="Portfolio"
-            />
-            <div
-                className={`site-header__toggle ${isActive ? "active" : ""}`}
-                onClick={toggleMenu}
-            ></div>
+        <header className={headerClassName}>
+            <Button className="site-header__logo" href="/" text="Portfolio" />
+            <div className={toggleClassName} onClick={toggleMenu}></div>
             <Navigation isActive={isActive} />
         </header>
     );

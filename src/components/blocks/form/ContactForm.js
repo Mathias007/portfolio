@@ -4,7 +4,12 @@ import FormField from "./FormField";
 
 export default function ContactForm() {
     return (
-        <form className="contact__form form">
+        <form
+            action="mailto:mateusz.stawowski1995@gmail.com"
+            method="post"
+            encType="text/plain"
+            className="contact__form form"
+        >
             <h3 className="form__header">Napisz do mnie</h3>
             <FormField
                 className="form__input"
