@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function FormField(props) {
-    const { type, name, placeholder, required, value } = props;
+    const { type, name, placeholder, required, value, onChange } = props;
 
     switch (type) {
         case "textarea":
@@ -10,7 +10,10 @@ export default function FormField(props) {
                     className="form__textarea"
                     placeholder={placeholder}
                     required={required}
-                />
+                    onChange={onChange}
+                >
+                    {value}
+                </textarea>
             );
         case "submit":
             return (
@@ -31,6 +34,8 @@ export default function FormField(props) {
                     name={name}
                     placeholder={placeholder}
                     required={required}
+                    value={value}
+                    onChange={onChange}
                 />
             );
     }
