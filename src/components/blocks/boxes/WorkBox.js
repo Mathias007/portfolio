@@ -26,7 +26,7 @@ export default function WorkBox(props) {
             {projectCode ? (
                 <Button
                     className="button button--work"
-                    href={`https://github.com/Mathias007/${projectCode}`}
+                    href={`${process.env.REACT_APP_GITHUB_URL}${projectCode}`}
                     text="Zobacz kod"
                 />
             ) : null}

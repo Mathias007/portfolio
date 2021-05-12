@@ -23,14 +23,14 @@ export default function WorkListElement(props) {
             <div className="work-box__buttons">
                 <Button
                     className="button button--work"
-                    href={`https://github.com/Mathias007/${projectCode}`}
+                    href={`${process.env.REACT_APP_GITHUB_URL}${projectCode}`}
                     text="Kod"
                 />
                 {projectPreview ? (
                     <Button
                         className="button button--work"
-                        href={`https://egildia.pl/projects/${projectCode}`}
-                        text="Preview"
+                        href={`${process.env.REACT_APP_PROJECTS_ROOT_URL}${projectCode}`}
+                        text="Demo"
                     />
                 ) : null}
             </div>
