@@ -1,23 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function Button(props) {
     const { className, href, text, onClick } = props;
 
+    const buttonClassName = className ? className : "button";
+
     if (onClick)
         return (
-            <button
-                href={href}
-                className={className ? className : "button"}
-                onClick={onClick}
-            >
+            <button href={href} className={buttonClassName} onClick={onClick}>
                 {text}
             </button>
         );
     else
         return (
-            <Link to={href} className={className ? className : "button"}>
+            <a href={href} className={buttonClassName} {...props}>
                 {text}
-            </Link>
+            </a>
         );
 }

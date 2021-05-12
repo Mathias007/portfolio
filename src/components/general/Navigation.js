@@ -5,9 +5,11 @@ import NavElement from "./navigation/NavElement";
 export default function Navigation(props) {
     const { isActive } = props;
 
+    const navigationClassName = `navigation__list ${isActive ? "active" : ""}`;
+
     return (
         <nav className="site-header__menu navigation">
-            <ul className={`navigation__list ${isActive ? "active" : ""}`}>
+            <ul className={navigationClassName}>
                 <NavElement path="/" title="Start" />
                 <NavElement path="about" title="O mnie" />
                 <NavElement path="timeline" title="Oś czasu" />

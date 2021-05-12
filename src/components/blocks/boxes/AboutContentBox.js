@@ -18,20 +18,18 @@ export default function AboutContentBox(props) {
         id,
     } = props;
 
-    if (id % 2 !== 0)
-        return (
-            <section className="about__section" key={id}>
-                <h3
-                    className="about__subheader"
-                    onClick={toggleContentVisibility}
-                >
-                    {contentSubheader ? contentSubheader : null}
-                </h3>
-                <div
-                    className={`about__content-box ${
-                        isHidden ? "about__content-box--hidden" : ""
-                    }`}
-                >
+    const contentBoxClassName = `about__content-box ${
+        isHidden ? "about__content-box--hidden" : ""
+    }`;
+
+    return (
+        <section className="about__section" key={id}>
+            <h3 className="about__subheader" onClick={toggleContentVisibility}>
+                {contentSubheader ? contentSubheader : null}
+            </h3>
+
+            {id % 2 !== 0 ? (
+                <div className={contentBoxClassName}>
                     <div className="about__text">
                         {contentText ? ReactHtmlParser(contentText) : null}
                     </div>
@@ -46,22 +44,8 @@ export default function AboutContentBox(props) {
                         ) : null}
                     </div>
                 </div>
-            </section>
-        );
-    else
-        return (
-            <section className="about__section" key={id}>
-                <h3
-                    className="about__subheader"
-                    onClick={toggleContentVisibility}
-                >
-                    {contentSubheader ? contentSubheader : null}
-                </h3>
-                <div
-                    className={`about__content-box ${
-                        isHidden ? "about__content-box--hidden" : ""
-                    }`}
-                >
+            ) : (
+                <div className={contentBoxClassName}>
                     <div className="about__image">
                         {imagePath ? (
                             <Image
@@ -76,6 +60,7 @@ export default function AboutContentBox(props) {
                         {contentText ? ReactHtmlParser(contentText) : null}
                     </div>
                 </div>
-            </section>
-        );
+            )}
+        </section>
+    );
 }
