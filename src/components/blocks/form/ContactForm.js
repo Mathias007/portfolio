@@ -31,7 +31,7 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={onSubmit}>
+        <form className="contact__form form" onSubmit={onSubmit}>
             <h3 className="form__header">Napisz do mnie</h3>
             <FormField
                 className="form__input"
