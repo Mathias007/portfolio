@@ -13,8 +13,13 @@ export default function Footer() {
                 <a
                     href={`${process.env.REACT_APP_GITHUB_URL}portfolio`}
                     target="__blank"
+                    className="source__link"
                 >
-                    <Icon icon={["fab", "github"]} />
+                    <Icon
+                        icon={["fab", "github"]}
+                        className="source__icon"
+                        title="Zobacz kod strony na Githubie"
+                    />
                 </a>
             </span>
         </footer>
