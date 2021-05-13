@@ -11,9 +11,8 @@ export default function FormField(props) {
                     placeholder={placeholder}
                     required={required}
                     onChange={onChange}
-                >
-                    {value}
-                </textarea>
+                    defaultValue={value}
+                />
             );
         case "submit":
             return (

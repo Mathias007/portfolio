@@ -7,6 +7,10 @@ export default function ContactForm() {
     const [toSend, setToSend] = useState({
         name: "",
         email: "",
+        topic: "",
+        message: "",
+    });
+    const [error, setErrorMsg] = useState({
         message: "",
     });
 
@@ -20,9 +24,21 @@ export default function ContactForm() {
         )
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
+                setToSend({
+                    name: "",
+                    email: "",
+                    topic: "",
+                    message: "",
+                });
+                setErrorMsg({
+                    message: "Wiadomość została wysłana!",
+                });
             })
             .catch((err) => {
                 console.log("FAILED...", err);
+                setErrorMsg({
+                    message: "Wystąpił błąd i wiadomość nie została wysłana.",
+                });
             });
     };
 
@@ -40,6 +56,15 @@ export default function ContactForm() {
                 placeholder="Imię i Nazwisko"
                 required
                 value={toSend.name}
+                onChange={handleChange}
+            />
+            <FormField
+                className="form__input"
+                type="text"
+                name="topic"
+                placeholder="Temat"
+                required
+                value={toSend.topic}
                 onChange={handleChange}
             />
             <FormField
@@ -65,6 +90,9 @@ export default function ContactForm() {
                 name="send"
                 value="Wyślij"
             />
+            {error.message ? (
+                <p className="form__error-info">{error.message}</p>
+            ) : null}
         </form>
     );
 }
