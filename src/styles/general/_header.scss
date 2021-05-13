@@ -15,25 +15,19 @@
     background: rgba(0, 0, 0, 0.7);
     transition: 0.5s;
 
+    &__toggle {
+        display: none;
+    }
+
     @media (max-width: map-get($map: $breakpoints, $key: medium)) {
         padding: 20px 50px;
 
         &__toggle {
-            width: 40px;
-            height: 40px;
-            background: url("../../assets/menu/open.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: 30px;
+            display: block;
+            width: 2em !important;
+            height: 2em;
+            color: $light-color;
             cursor: pointer;
-
-            &.active {
-                background: url("../../assets/menu/close.png");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: 25px;
-                cursor: pointer;
-            }
         }
     }
 
@@ -59,7 +53,9 @@
             padding: 20px 50px;
 
             & .site-header__toggle {
-                filter: invert(1);
+                color: $dark-color;
+                width: 2em;
+                height: 2em;
             }
         }
 

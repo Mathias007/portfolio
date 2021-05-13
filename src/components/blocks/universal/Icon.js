@@ -22,6 +22,8 @@ import {
     faAward,
     faGavel,
     faBriefcase,
+    faTimes,
+    faBars,
 } from "@fortawesome/free-solid-svg-icons";
 
 import {
@@ -33,6 +35,8 @@ import {
 
 library.add(
     // fas
+    faTimes,
+    faBars,
     faHome,
     faEnvelope,
     faEthernet,

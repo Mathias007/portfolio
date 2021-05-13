@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Button from "../blocks/universal/Button";
+import Icon from "../blocks/universal/Icon";
 import Navigation from "./Navigation";
 
 export default function Header() {
@@ -27,13 +28,16 @@ export default function Header() {
     };
 
     const headerClassName = `site-header ${isSticky ? "sticky" : ""}`;
-    const toggleClassName = `site-header__toggle ${isActive ? "active" : ""}`;
 
     return (
         <header className={headerClassName}>
             <Button className="site-header__logo" href="/" text="Portfolio" />
-            <div className={toggleClassName} onClick={toggleMenu}></div>
-            <Navigation isActive={isActive} />
+            <Icon
+                icon={`${isActive ? "times" : "bars"}`}
+                className="site-header__toggle"
+                onClick={toggleMenu}
+            />
+            <Navigation isActive={isActive} onClick={toggleMenu} />
         </header>
     );
 }
