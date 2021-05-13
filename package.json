@@ -2,7 +2,7 @@
     "name": "mathias-portfolio",
     "description": "Projekt osobistego portfolio zbudowany z wykorzystaniem HTML, Javascript we frameworku React oraz SCSS z metodologią BEM.",
     "author": "Mateusz Mathias Stawowski",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "homepage": ".",
     "dependencies": {

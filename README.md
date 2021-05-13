@@ -27,7 +27,7 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 
 ## Harmonogram prac
 
-### Stan na dzień 9 maja 2021 r.
+### Stan na dzień 13 maja 2021 r.
 
  - [x] 1. Stworzenie struktury portfolio typu Single-Page-App (***HTML, CSS, vanilla JavaScript***).
  - [x] 2. Przebudowa HTML pod kątem ***semantyki***.
@@ -51,8 +51,12 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 	- [x] d) aktualizacja styli.
 - [x] 11. Rozważenie implementacji ***React Router DOM*** w związku z rozrostem aplikacji.
 - [x] 12. Dodanie **loadera*, obsługa ***lazy-loading*** i ***Suspense***.
-- [ ] 13. Obsługa **formularza** i innych elementów tego rodzaju na stronie.
-- [ ] 14. Generalny przegląd i refaktoryzacja kodu.
+- [x] 13. Obsługa **formularza** (implementacja biblioteki ***emailjs-com***) i innych elementów tego rodzaju na stronie.
+- [x] 14. Generalny przegląd i refaktoryzacja kodu.
 - [ ] 15. Utworzenie **backendu**. Niezbędne modyfikacje dostosowawcze po stronie klienta.
+	- [x] a) utworzenie bazy danych ***MongoDB***, zawierającej kolekcje danych zbudowanych na bazie plików tymczasowo przechowywanych w katalogu **data**,
+	- [ ] b) utworzenie serwera ***Node.js*** + ***Express***, połączonego z bazą danych (***mongoose***), 
+	- [ ] c) stworzenie **API** i udostępnienie go frontendowi,
+	- [ ] d) pobranie i przetworzenie danych z backendu w aplikacji Reacta (wykorzystanie hooków i funkcji fetchujących).
 - [ ] 16. Finalne poprawki i optymalizacja. Opcjonalne wdrożenie testów.
 - [ ] 17. Publikacja (deploy) ostatecznej wersji projektu. 
