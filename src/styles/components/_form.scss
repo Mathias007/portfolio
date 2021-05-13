@@ -33,6 +33,7 @@
     &__input:focus,
     &__textarea:focus {
         background-color: $less-light-color;
+        color: $less-dark-color;
     }
 
     &__textarea {
@@ -57,6 +58,13 @@
             background-color: $main-color;
             filter: brightness(80%);
         }
+    }
+
+    &__error-info {
+        color: $less-light-color;
+        text-align: center;
+        padding: 10px;
+        background: $less-dark-color;
     }
 
     @include showElementMixin(3s);

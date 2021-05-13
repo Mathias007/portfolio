@@ -5,6 +5,7 @@
 .copyright {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: $black-color;
     color: $light-color;
     text-align: center;
@@ -15,6 +16,11 @@
     }
 
     &__source {
-        margin-right: 10px;
+        margin-right: 2em;
+    }
+
+    .source__icon {
+        width: 2em;
+        height: 2em;
     }
 }
