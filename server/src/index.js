@@ -3,12 +3,15 @@ import express from "express";
 import mongoose from "mongoose";
 
 import routes from "./routes";
+
 import {
     DATABASE_CONNECTION_ERROR_MESSAGE,
     PORT_LISTENING_START_MESSAGE,
 } from "./config/messages";
-
+import { paths } from "./config/names";
 import config from "./config/config";
+
+const { root } = paths;
 const { NODE_PORT, MONGO_URI, CORS_ORIGIN } = config;
 
 const app = express();
@@ -26,7 +29,7 @@ mongoose
     })
     .catch((err) => console.log(DATABASE_CONNECTION_ERROR_MESSAGE(err)));
 
-app.use("/", routes);
+app.use(root, routes);
 app.listen(NODE_PORT, () => {
     console.log(PORT_LISTENING_START_MESSAGE(NODE_PORT));
 });

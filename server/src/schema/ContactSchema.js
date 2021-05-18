@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
+import { collections } from "../config/names";
+
 const Schema = mongoose.Schema;
 
 const Contact = new Schema({}, { strict: false });
 
 export const ContactSchema = mongoose.model(
-    "portfolio_contact",
+    collections.contact,
     Contact,
-    "portfolio_contact"
+    collections.contact
 );

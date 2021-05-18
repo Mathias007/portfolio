@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 
+import { collections } from "../config/names";
+
 const Schema = mongoose.Schema;
 
 const Projects = new Schema({}, { strict: false });
 
 export const ProjectsSchema = mongoose.model(
-    "portfolio_projects",
+    collections.projects,
     Projects,
-    "portfolio_projects"
+    collections.projects
 );
