@@ -1,20 +1,32 @@
-const path = require("path");
+import cors from "cors";
+import express from "express";
+import mongoose from "mongoose";
 
-const dotenv = require("dotenv");
-dotenv.config(); 
+import routes from "./routes";
+import {
+    DATABASE_CONNECTION_ERROR_MESSAGE,
+    PORT_LISTENING_START_MESSAGE,
+} from "./config/messages";
 
-const express = require("express");
-const app = express(); // create express app
+import config from "./config/config";
+const { NODE_PORT, MONGO_URI, CORS_ORIGIN } = config;
 
-// add middlewares
-app.use(express.static(path.join(__dirname, "..", "build")));
-app.use(express.static("public"));
+const app = express();
 
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
-});
+const corsOptions = {
+    origin: CORS_ORIGIN,
+};
+app.use(cors(corsOptions));
 
-// start express server on port 5000
-app.listen(process.env.NODE_PORT, () => {
-    console.log(`server started on port ${process.env.NODE_PORT}`);
+mongoose
+    .connect(MONGO_URI, {
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+    })
+    .catch((err) => console.log(DATABASE_CONNECTION_ERROR_MESSAGE(err)));
+
+app.use("/", routes);
+app.listen(NODE_PORT, () => {
+    console.log(PORT_LISTENING_START_MESSAGE(NODE_PORT));
 });
