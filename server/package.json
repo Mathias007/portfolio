@@ -1,0 +1,14 @@
+{
+    "name": "mathias-portfolio-server",
+    "version": "1.0.0",
+    "description": "Serwer backendowy dla projektu Mathias Portfolio, napisany z wykorzystniem Node.js we frameworku Express, z połączeniem z bazą danych MongoDB.",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "nodemon index.js"
+    },
+    "dependencies": {
+        "express": "4.17.1",
+        "nodemon": "2.0.3"
+    }
+}
