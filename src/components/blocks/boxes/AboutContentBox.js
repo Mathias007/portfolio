@@ -16,49 +16,56 @@ export default function AboutContentBox(props) {
         imagePath,
         imageDescription,
         id,
+        index,
     } = props;
 
     const contentBoxClassName = `about__content-box ${
         isHidden ? "about__content-box--hidden" : ""
     }`;
 
-    return (
-        <section className="about__section" key={id}>
+    const generateContentSubheader = (contentSubheader) => {
+        return (
             <h3 className="about__subheader" onClick={toggleContentVisibility}>
                 {contentSubheader ? contentSubheader : null}
             </h3>
+        );
+    };
 
-            {id % 2 !== 0 ? (
+    const generateContentText = (contentText) => {
+        return (
+            <div className="about__text">
+                {contentText ? ReactHtmlParser(contentText) : null}
+            </div>
+        );
+    };
+
+    const generateContentImage = (imagePath, imageDescription) => {
+        return (
+            <div className="about__image">
+                {imagePath ? (
+                    <Image
+                        imagePath={imagePath}
+                        imageDescription={
+                            imageDescription ? imageDescription : "img"
+                        }
+                    />
+                ) : null}
+            </div>
+        );
+    };
+
+    return (
+        <section className="about__section" key={id}>
+            {generateContentSubheader(contentSubheader)}
+            {index % 2 === 0 ? (
                 <div className={contentBoxClassName}>
-                    <div className="about__text">
-                        {contentText ? ReactHtmlParser(contentText) : null}
-                    </div>
-                    <div className="about__image">
-                        {imagePath ? (
-                            <Image
-                                imagePath={imagePath}
-                                imageDescription={
-                                    imageDescription ? imageDescription : "img"
-                                }
-                            />
-                        ) : null}
-                    </div>
+                    {generateContentText(contentText)}
+                    {generateContentImage(imagePath, imageDescription)}
                 </div>
             ) : (
                 <div className={contentBoxClassName}>
-                    <div className="about__image">
-                        {imagePath ? (
-                            <Image
-                                imagePath={imagePath}
-                                imageDescription={
-                                    imageDescription ? imageDescription : "img"
-                                }
-                            />
-                        ) : null}
-                    </div>
-                    <div className="about__text">
-                        {contentText ? ReactHtmlParser(contentText) : null}
-                    </div>
+                    {generateContentImage(imagePath, imageDescription)}
+                    {generateContentText(contentText)}
                 </div>
             )}
         </section>
