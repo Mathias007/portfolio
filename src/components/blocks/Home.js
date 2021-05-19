@@ -2,6 +2,9 @@ import React from "react";
 
 import Button from "./universal/Button";
 
+import { paths } from "../../config/names";
+const { about } = paths;
+
 export default function Home() {
     return (
         <article className="portfolio__block home" id="home">
@@ -16,7 +19,7 @@ export default function Home() {
 
                 <Button
                     className="home__button button"
-                    href="about"
+                    href={about}
                     text="O mnie"
                 />
             </div>
