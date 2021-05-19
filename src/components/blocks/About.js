@@ -4,7 +4,10 @@ import axios from "axios";
 import BlockHeading from "./heading/BlockHeading";
 import Loading from "./universal/Loading";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { about } = paths;
 
 const AboutContentBox = React.lazy(() => import("./boxes/AboutContentBox"));
@@ -17,9 +20,7 @@ export default function About() {
         setDataLoading(true);
 
         async function fetchAboutData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${about}`
-            );
+            const result = await axios(`${SERVER_URL}${about}`);
 
             setAboutData(result.data.aboutData);
         }

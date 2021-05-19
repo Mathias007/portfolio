@@ -3,6 +3,9 @@ import React from "react";
 import Button from "../universal/Button";
 import Image from "../universal/Image";
 
+import config from "../../../config/config";
+const { GITHUB_URL, PROJECTS_ROOT_URL } = config;
+
 export default function WorkListElement(props) {
     const {
         projectTitle,
@@ -23,13 +26,13 @@ export default function WorkListElement(props) {
             <div className="work-box__buttons">
                 <Button
                     className="button button--work"
-                    href={`${process.env.REACT_APP_GITHUB_URL}${projectCode}`}
+                    href={`${GITHUB_URL}${projectCode}`}
                     text="Kod"
                 />
                 {projectPreview ? (
                     <Button
                         className="button button--work"
-                        href={`${process.env.REACT_APP_PROJECTS_ROOT_URL}${projectCode}`}
+                        href={`${PROJECTS_ROOT_URL}${projectCode}`}
                         text="Demo"
                     />
                 ) : null}

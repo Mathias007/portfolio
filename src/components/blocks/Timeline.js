@@ -13,7 +13,10 @@ import Icon from "./universal/Icon";
 import Button from "./universal/Button";
 import BlockHeading from "./heading/BlockHeading";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { timeline } = paths;
 
 export default function Timeline() {
@@ -24,9 +27,7 @@ export default function Timeline() {
         setDataLoading(true);
 
         async function fetchTimelineData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${timeline}`
-            );
+            const result = await axios(`${SERVER_URL}${timeline}`);
 
             setTimelineData(result.data.timelineData);
         }

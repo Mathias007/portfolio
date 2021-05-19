@@ -4,7 +4,10 @@ import axios from "axios";
 import BlockHeading from "./heading/BlockHeading";
 import ServiceBox from "./boxes/ServiceBox";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { technologies } = paths;
 
 export default function Services() {
@@ -15,9 +18,7 @@ export default function Services() {
         setDataLoading(true);
 
         async function fetchTechnologiesData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${technologies}`
-            );
+            const result = await axios(`${SERVER_URL}${technologies}`);
 
             setTechnologiesData(result.data.technologiesData);
         }

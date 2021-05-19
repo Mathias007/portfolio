@@ -6,7 +6,10 @@ import BlockHeading from "./heading/BlockHeading";
 
 import Loading from "./universal/Loading";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { projects } = paths;
 
 const WorkBox = React.lazy(() => import("./boxes/WorkBox"));
@@ -21,9 +24,7 @@ export default function Work() {
         setDataLoading(true);
 
         async function fetchProjectsData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${projects}`
-            );
+            const result = await axios(`${SERVER_URL}${projects}`);
 
             setProjectsData(result.data.projectsData);
         }

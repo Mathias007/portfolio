@@ -5,7 +5,10 @@ import BlockHeading from "./heading/BlockHeading";
 import ContactInfoBox from "./boxes/ContactInfoBox";
 import ContactForm from "./form/ContactForm";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { contact } = paths;
 
 export default function Contact() {
@@ -16,9 +19,7 @@ export default function Contact() {
         setDataLoading(true);
 
         async function fetchContactData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${contact}`
-            );
+            const result = await axios(`${SERVER_URL}${contact}`);
 
             setContactData(result.data.contactData);
         }

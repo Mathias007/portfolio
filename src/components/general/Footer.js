@@ -2,6 +2,9 @@ import React from "react";
 
 import Icon from "../blocks/universal/Icon";
 
+import config from "../../config/config";
+const { GITHUB_URL } = config;
+
 export default function Footer() {
     return (
         <footer className="copyright">
@@ -11,7 +14,7 @@ export default function Footer() {
             </p>
             <span className="copyright__source">
                 <a
-                    href={`${process.env.REACT_APP_GITHUB_URL}portfolio`}
+                    href={`${GITHUB_URL}portfolio`}
                     target="__blank"
                     className="source__link"
                 >

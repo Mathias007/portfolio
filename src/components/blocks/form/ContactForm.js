@@ -3,6 +3,9 @@ import { send } from "emailjs-com";
 
 import FormField from "./FormField";
 
+import config from "../../../config/config";
+const { EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_USER_ID } = config;
+
 export default function ContactForm() {
     const [toSend, setToSend] = useState({
         name: "",
@@ -16,12 +19,7 @@ export default function ContactForm() {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        send(
-            process.env.REACT_APP_EMAIL_SERVICE_ID,
-            process.env.REACT_APP_EMAIL_TEMPLATE_ID,
-            toSend,
-            process.env.REACT_APP_EMAIL_USER_ID
-        )
+        send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, toSend, EMAIL_USER_ID)
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);
                 setToSend({

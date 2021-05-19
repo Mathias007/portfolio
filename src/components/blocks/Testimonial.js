@@ -4,7 +4,10 @@ import axios from "axios";
 import BlockHeading from "./heading/BlockHeading";
 import TestimonialBox from "./boxes/TestimonialBox";
 
+import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const { SERVER_URL } = config;
 const { quotes } = paths;
 
 export default function Testimonial() {
@@ -15,9 +18,7 @@ export default function Testimonial() {
         setDataLoading(true);
 
         async function fetchQuotesData() {
-            const result = await axios(
-                `${process.env.REACT_APP_SERVER_URL}${quotes}`
-            );
+            const result = await axios(`${SERVER_URL}${quotes}`);
 
             setQuotesData(result.data.quotesData);
         }

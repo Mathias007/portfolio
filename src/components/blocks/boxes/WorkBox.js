@@ -3,6 +3,9 @@ import React from "react";
 import Button from "../universal/Button";
 import Image from "../universal/Image";
 
+import config from "../../../config/config";
+const { GITHUB_URL } = config;
+
 export default function WorkBox(props) {
     const {
         projectTitle,
@@ -26,7 +29,7 @@ export default function WorkBox(props) {
             {projectCode ? (
                 <Button
                     className="button button--work"
-                    href={`${process.env.REACT_APP_GITHUB_URL}${projectCode}`}
+                    href={`${GITHUB_URL}${projectCode}`}
                     text="Zobacz kod"
                 />
             ) : null}
