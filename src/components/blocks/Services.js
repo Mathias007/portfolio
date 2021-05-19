@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import BlockHeading from "./heading/BlockHeading";
 import ServiceBox from "./boxes/ServiceBox";
 
-import { techData } from "../../data/techData";
+import { paths } from "../../config/names";
+const { technologies } = paths;
 
 export default function Services() {
+    const [dataLoading, setDataLoading] = useState(false);
+    const [technologiesData, setTechnologiesData] = useState([]);
+
+    useEffect(() => {
+        setDataLoading(true);
+
+        async function fetchTechnologiesData() {
+            const result = await axios(
+                `${process.env.REACT_APP_SERVER_URL}${technologies}`
+            );
+
+            setTechnologiesData(result.data.technologiesData);
+        }
+
+        if (dataLoading) {
+            fetchTechnologiesData();
+        }
+        return () => {
+            setDataLoading(false);
+        };
+    }, [technologiesData, dataLoading]);
+
     return (
         <article className="portfolio__block services" id="services">
             <BlockHeading
@@ -16,13 +40,17 @@ export default function Services() {
             />
 
             <div className="services__content block-content">
-                {techData.map((element) => {
-                    const { id, techImageName, techImageDescription } = element;
+                {technologiesData.map((element) => {
+                    const {
+                        _id,
+                        techImageName,
+                        techImageDescription,
+                    } = element;
 
                     return (
                         <ServiceBox
-                            id={id}
-                            key={id}
+                            id={_id}
+                            key={_id}
                             imagePath={`technologies/png/${techImageName}.png`}
                             imageDescription={techImageDescription}
                         />

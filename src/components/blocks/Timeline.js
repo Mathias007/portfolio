@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import ReactHtmlParser from "react-html-parser";
 
 import {
@@ -12,9 +13,32 @@ import Icon from "./universal/Icon";
 import Button from "./universal/Button";
 import BlockHeading from "./heading/BlockHeading";
 
-import { timelineElements } from "../../data/timeData";
+import { paths } from "../../config/names";
+const { timeline } = paths;
 
 export default function Timeline() {
+    const [dataLoading, setDataLoading] = useState(false);
+    const [timelineData, setTimelineData] = useState([]);
+
+    useEffect(() => {
+        setDataLoading(true);
+
+        async function fetchTimelineData() {
+            const result = await axios(
+                `${process.env.REACT_APP_SERVER_URL}${timeline}`
+            );
+
+            setTimelineData(result.data.timelineData);
+        }
+
+        if (dataLoading) {
+            fetchTimelineData();
+        }
+        return () => {
+            setDataLoading(false);
+        };
+    }, [timelineData, dataLoading]);
+
     return (
         <article className="portfolio__block timeline" id="timeline">
             <BlockHeading
@@ -23,9 +47,9 @@ export default function Timeline() {
                 isHeadingWhite
             />
             <VerticalTimeline>
-                {timelineElements.map((element) => {
+                {timelineData.map((element) => {
                     const {
-                        id,
+                        _id,
                         title,
                         location,
                         site,
@@ -59,7 +83,7 @@ export default function Timeline() {
 
                     return (
                         <VerticalTimelineElement
-                            key={id}
+                            key={_id}
                             date={date}
                             dateClassName="timeline__date"
                             iconClassName={iconClassName}

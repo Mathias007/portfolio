@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import BlockHeading from "./heading/BlockHeading";
 import ContactInfoBox from "./boxes/ContactInfoBox";
 import ContactForm from "./form/ContactForm";
 
-import { contactData } from "../../data/contactData";
+import { paths } from "../../config/names";
+const { contact } = paths;
 
 export default function Contact() {
+    const [dataLoading, setDataLoading] = useState(false);
+    const [contactData, setContactData] = useState([]);
+
+    useEffect(() => {
+        setDataLoading(true);
+
+        async function fetchContactData() {
+            const result = await axios(
+                `${process.env.REACT_APP_SERVER_URL}${contact}`
+            );
+
+            setContactData(result.data.contactData);
+        }
+
+        if (dataLoading) {
+            fetchContactData();
+        }
+        return () => {
+            setDataLoading(false);
+        };
+    }, [contactData, dataLoading]);
+
     return (
         <article className="portfolio__block contact" id="contact">
             <BlockHeading
@@ -22,7 +46,7 @@ export default function Contact() {
                     <div className="contact__info-box">
                         {contactData.map((element) => {
                             const {
-                                id,
+                                _id,
                                 contactType,
                                 contactLabel,
                                 contactLink,
@@ -31,8 +55,8 @@ export default function Contact() {
 
                             return (
                                 <ContactInfoBox
-                                    id={id}
-                                    key={id}
+                                    id={_id}
+                                    key={_id}
                                     infoName={contactType}
                                     infoData={contactLabel}
                                     infoLink={contactLink}

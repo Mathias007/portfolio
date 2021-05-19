@@ -1,15 +1,40 @@
-import React, { useState } from "react";
+import React, { Suspense, useState, useEffect } from "react";
+import axios from "axios";
 
 import Button from "./universal/Button";
 import BlockHeading from "./heading/BlockHeading";
 
-import WorkBox from "./boxes/WorkBox";
-import WorkListElement from "./boxes/WorkListElement";
+import Loading from "./universal/Loading";
 
-import { workData } from "../../data/workData";
+import { paths } from "../../config/names";
+const { projects } = paths;
+
+const WorkBox = React.lazy(() => import("./boxes/WorkBox"));
+const WorkListElement = React.lazy(() => import("./boxes/WorkListElement"));
 
 export default function Work() {
     const [isActive, setActive] = useState(false);
+    const [dataLoading, setDataLoading] = useState(false);
+    const [projectsData, setProjectsData] = useState([]);
+
+    useEffect(() => {
+        setDataLoading(true);
+
+        async function fetchProjectsData() {
+            const result = await axios(
+                `${process.env.REACT_APP_SERVER_URL}${projects}`
+            );
+
+            setProjectsData(result.data.projectsData);
+        }
+
+        if (dataLoading) {
+            fetchProjectsData();
+        }
+        return () => {
+            setDataLoading(false);
+        };
+    }, [projectsData, dataLoading]);
 
     const toggleProjectsVisibility = () => {
         setActive(!isActive);
@@ -24,9 +49,9 @@ export default function Work() {
             />
 
             <div className="work__content block-content">
-                {workData.map((element) => {
+                {projectsData.map((element) => {
                     const {
-                        id,
+                        _id,
                         projectTitle,
                         projectPreview,
                         projectCode,
@@ -36,15 +61,17 @@ export default function Work() {
 
                     if (projectCategory === "website")
                         return (
-                            <WorkBox
-                                key={id}
-                                id={id}
-                                projectTitle={projectTitle}
-                                projectPreview={projectPreview}
-                                projectCode={projectCode}
-                                imagePath={projectImage}
-                                imageDescription={projectTitle}
-                            />
+                            <Suspense fallback={<Loading />} key={_id}>
+                                <WorkBox
+                                    key={_id}
+                                    id={_id}
+                                    projectTitle={projectTitle}
+                                    projectPreview={projectPreview}
+                                    projectCode={projectCode}
+                                    imagePath={projectImage}
+                                    imageDescription={projectTitle}
+                                />
+                            </Suspense>
                         );
                     else return null;
                 })}
@@ -54,15 +81,14 @@ export default function Work() {
                     <div className="work__addition block-heading">
                         <Button
                             className="work__button button"
-                            href="#work"
                             text={isActive ? "Pokaż mniej" : "Pokaż więcej"}
                             onClick={toggleProjectsVisibility}
                         />
                     </div>
                     <div className="work__content block-content">
-                        {workData.map((element) => {
+                        {projectsData.map((element) => {
                             const {
-                                id,
+                                _id,
                                 projectTitle,
                                 projectPreview,
                                 projectCode,
@@ -71,26 +97,28 @@ export default function Work() {
 
                             if (projectCategory !== "website")
                                 return (
-                                    <WorkListElement
-                                        key={id}
-                                        id={id}
-                                        projectTitle={projectTitle}
-                                        projectPreview={projectPreview}
-                                        projectCode={projectCode}
-                                        imagePath={
-                                            projectCategory === "oop-game"
-                                                ? "work/webdev2.svg"
-                                                : projectCategory ===
-                                                  "elder-js-project"
-                                                ? "work/webdev1.svg"
-                                                : projectCategory ===
-                                                  ("react-project" ||
-                                                      "big-project")
-                                                ? "work/react.svg"
-                                                : "work/javascript.svg"
-                                        }
-                                        imageDescription={projectTitle}
-                                    />
+                                    <Suspense fallback={<Loading />} key={_id}>
+                                        <WorkListElement
+                                            key={_id}
+                                            id={_id}
+                                            projectTitle={projectTitle}
+                                            projectPreview={projectPreview}
+                                            projectCode={projectCode}
+                                            imagePath={
+                                                projectCategory === "oop-game"
+                                                    ? "work/webdev2.svg"
+                                                    : projectCategory ===
+                                                      "elder-js-project"
+                                                    ? "work/webdev1.svg"
+                                                    : projectCategory ===
+                                                      ("react-project" ||
+                                                          "big-project")
+                                                    ? "work/react.svg"
+                                                    : "work/javascript.svg"
+                                            }
+                                            imageDescription={projectTitle}
+                                        />
+                                    </Suspense>
                                 );
                             else return null;
                         })}
