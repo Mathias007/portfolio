@@ -7,7 +7,12 @@ export default function Button(props) {
 
     if (onClick)
         return (
-            <button href={href} className={buttonClassName} onClick={onClick}>
+            <button
+                href={href}
+                className={buttonClassName}
+                onClick={onClick}
+                {...props}
+            >
                 {text}
             </button>
         );

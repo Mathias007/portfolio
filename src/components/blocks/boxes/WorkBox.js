@@ -19,7 +19,12 @@ export default function WorkBox(props) {
         <section className="work-box">
             <h3 className="work-box__title">{projectTitle}</h3>
 
-            <a href={projectPreview} className="work-box__link">
+            <a
+                href={projectPreview}
+                className="work-box__link"
+                target="_blank"
+                rel="noreferrer"
+            >
                 <Image
                     imageClass="work-box__image"
                     imagePath={imagePath}
@@ -31,6 +36,7 @@ export default function WorkBox(props) {
                     className="button button--work"
                     href={`${GITHUB_URL}${projectCode}`}
                     text="Zobacz kod"
+                    target="_blank"
                 />
             ) : null}
         </section>
