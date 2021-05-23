@@ -1,7 +1,13 @@
-import React, { Suspense } from "react";
+import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Loading from "../blocks/universal/Loading";
+import Home from "../blocks/Home";
+import About from "../blocks/About";
+import Timeline from "../blocks/Timeline";
+import Services from "../blocks/Services";
+import Work from "../blocks/Work";
+import Testimonial from "../blocks/Testimonial";
+import Contact from "../blocks/Contact";
 
 import { paths } from "../../config/names";
 const {
@@ -14,42 +20,32 @@ const {
     inspirations,
 } = paths;
 
-const Home = React.lazy(() => import("../blocks/Home"));
-const About = React.lazy(() => import("../blocks/About"));
-const Timeline = React.lazy(() => import("../blocks/Timeline"));
-const Services = React.lazy(() => import("../blocks/Services"));
-const Work = React.lazy(() => import("../blocks/Work"));
-const Testimonial = React.lazy(() => import("../blocks/Testimonial"));
-const Contact = React.lazy(() => import("../blocks/Contact"));
-
 export default function Main() {
     return (
         <main className="portfolio">
-            <Suspense fallback={<Loading />}>
-                <Switch>
-                    <Route exact path={home}>
-                        <Home />
-                    </Route>
-                    <Route path={about}>
-                        <About />
-                    </Route>
-                    <Route path={timeline}>
-                        <Timeline />
-                    </Route>
-                    <Route path={projects}>
-                        <Work />
-                    </Route>
-                    <Route path={technologies}>
-                        <Services />
-                    </Route>
-                    <Route path={inspirations}>
-                        <Testimonial />
-                    </Route>
-                    <Route path={contact}>
-                        <Contact />
-                    </Route>
-                </Switch>
-            </Suspense>
+            <Switch>
+                <Route exact path={home}>
+                    <Home />
+                </Route>
+                <Route path={about}>
+                    <About />
+                </Route>
+                <Route path={timeline}>
+                    <Timeline />
+                </Route>
+                <Route path={projects}>
+                    <Work />
+                </Route>
+                <Route path={technologies}>
+                    <Services />
+                </Route>
+                <Route path={inspirations}>
+                    <Testimonial />
+                </Route>
+                <Route path={contact}>
+                    <Contact />
+                </Route>
+            </Switch>
         </main>
     );
 }
