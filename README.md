@@ -1,10 +1,24 @@
 # Mathias Portfolio (Portfolio)
 
-### Rozpoczęcie projektu: 29 kwietnia 2021 r.
+## Rozpoczęcie projektu: 29 kwietnia 2021 r.
 
 Celem projektu jest utworzenie profesjonalnej strony autobiograficznej, zawierającej prezentowane w przystępnej formie informacje na temat historii zainteresowań programistycznych, dotychczasowych realizacji (hobbystycznych i komercyjnych), doświadczeń zawodowych i edukacyjnych, a także poznanych technologii. Portfolio powinno zawierać także dane kontaktowe oraz formularz kontaktowy. 
 
 Zarówno etapowy sposób tworzenia projektu, jak i wykorzystywane języki, biblioteki i rozwiązania mają charakter podsumowujący dotychczasowe efekty nauki programowania. Dodatkowo portfolio powinno być reużywalne, tj. zdatne do wykorzystania także przez inne osoby do tworzenia własnych stron-wizytówek, jak również przydatne przy tworzeniu innych projektów z uwagi na zastosowanie odpowiednich praktyk programistycznych.
+
+## Finalizacja projektu (v. 1.0.0).
+W dniu ***23 maja 2021 r.***, tuż przed moimi 26. urodzinami, w internecie zawitała końcowa wersja projektu portfolio (1.0.0). Została umieszczona pod adresem [mathias.net.pl](https://mathias.net.pl), posiadającym **certyfikat SSL**. 
+
+Finalnie wyszła z tego pełnoprawna fullstackowa aplikacja, implementująca między innymi **React** z **SCSS** po stronie frontendu (w tym wiele ciekawych bibliotek, wymienionych w pliku package.json oraz harmonogramie projektu poniżej) oraz **Express** i **MongoDB** w backendzie. Udało się także znaleźć - jak myślę - fajne zastosowanie dla **Github API** w sekcji poświęconej projektom.
+
+Serwer został przy tym umieszczony na **Heroku**, co pozwoliło na rozgryzienie specyfiki deploymentu w tym serwisie (cenna wiedza na przyszłość). W przyszłości zostanie jednak umieszczony na zakupionym hostingu, który aktualnie testuję, zawierającym Node.js i wsparcie dla baz nierelacyjnych.
+
+## Plany na przyszłość.
+W najbliższym czasie zamierzam przenieść wersje demonstracyjne projektów z serwera eGildii Graczy na domenę **mathias.net.pl**, a także je ewentualnie zaktualizować w miarę potrzeby (niektóre projekty wciąż nie doczekały się preview, co wypada nadrobić). 
+
+Odnośnie samej strony portfolio - z pewnością są jeszcze elementy, które można by było zoptymalizować, dlatego przy kolejnych aktualizacjach będę się skupiał raczej na mrówczej pracy z kodem niż na dodawaniu kolejnych zakładek i treści (których ilość wydaje się optymalna). Do rozważenia pozostaje jeszcze m. in. dodanie różnych wersji językowych. Generalnie jednak jestem zadowolony z aktualnego stanu projektu, a zainteresowanych zachęcam do jego wykorzystywaniu do budowania własnych stron typu portfolio.
+
+Dzięki implementacji Github API zawartość portfolio będzie praktycznie stale aktualna. Kolejne projekty będą się bowiem na niej pojawiać w zasadzie automatycznie. Chętnych do ewentualnej współpracy w ramach np. projektów typu open source bądź konkretnych zadań komercyjnych zachęcam do kontaktu - wszystkie dane znajdują się w portfolio :-).
 
 ## Struktura strony
 
@@ -27,7 +41,7 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 
 ## Harmonogram prac
 
-### Stan na dzień 19 maja 2021 r.
+### Stan na dzień 23 maja 2021 r. (projekt zakończony)
 
  - [x] 1. Stworzenie struktury portfolio typu Single-Page-App (***HTML, CSS, vanilla JavaScript***).
  - [x] 2. Przebudowa HTML pod kątem ***semantyki***.
@@ -60,5 +74,5 @@ Stopka strony zawiera informację o autorze oraz wzmiankę nt. praw autorskich (
 	- [x] d) refaktoryzacja backendu, zastosowanie nowoczesnej składni JS z użyciem **Babela**,
 	- [x] d) pobranie i przetworzenie danych z backendu w aplikacji Reacta (wykorzystanie ***hooków*** i ***axios***),
 	- [x] e) rozważenie implementacji Github API do dynamicznego listowania repozytoriów (w miejsce statycznej tabeli w bazie danych).
-- [ ] 16. Finalne poprawki, refactor i optymalizacja.
-- [ ] 17. Publikacja (deploy) ostatecznej wersji projektu, w tym wybór hostingu i domeny.
+- [x] 16. Finalne poprawki, refactor i optymalizacja.
+- [x] 17. Publikacja (deploy) ostatecznej wersji projektu, w tym wybór hostingu i domeny.
