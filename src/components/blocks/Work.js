@@ -9,7 +9,7 @@ import Loading from "./universal/Loading";
 import config from "../../config/config";
 import { paths } from "../../config/names";
 
-const { SERVER_URL } = config;
+const { SERVER_URL, GITHUB_API } = config;
 const { projects } = paths;
 
 const WorkBox = React.lazy(() => import("./boxes/WorkBox"));
@@ -19,6 +19,7 @@ export default function Work() {
     const [isActive, setActive] = useState(false);
     const [dataLoading, setDataLoading] = useState(false);
     const [projectsData, setProjectsData] = useState([]);
+    const [githubData, setGithubData] = useState([]);
 
     useEffect(() => {
         setDataLoading(true);
@@ -29,8 +30,15 @@ export default function Work() {
             setProjectsData(result.data.projectsData);
         }
 
+        async function fetchGithubData() {
+            const result = await axios(`${GITHUB_API}?per_page=100`);
+
+            setGithubData(result.data);
+        }
+
         if (dataLoading) {
             fetchProjectsData();
+            fetchGithubData();
         }
         return () => {
             setDataLoading(false);
@@ -87,42 +95,37 @@ export default function Work() {
                         />
                     </div>
                     <div className="work__content block-content">
-                        {projectsData.map((element) => {
-                            const {
-                                _id,
-                                projectTitle,
-                                projectPreview,
-                                projectCode,
-                                projectCategory,
-                            } = element;
-
-                            if (projectCategory !== "website")
+                        {githubData
+                            .sort(function (a, b) {
                                 return (
-                                    <Suspense fallback={<Loading />} key={_id}>
+                                    new Date(b.created_at) -
+                                    new Date(a.created_at)
+                                );
+                            })
+                            .map((element) => {
+                                const {
+                                    description,
+                                    homepage,
+                                    html_url,
+                                    id,
+                                    language,
+                                    name,
+                                } = element;
+
+                                return (
+                                    <Suspense fallback={<Loading />} key={id}>
                                         <WorkListElement
-                                            key={_id}
-                                            id={_id}
-                                            projectTitle={projectTitle}
-                                            projectPreview={projectPreview}
-                                            projectCode={projectCode}
-                                            imagePath={
-                                                projectCategory === "oop-game"
-                                                    ? "work/webdev2.svg"
-                                                    : projectCategory ===
-                                                      "elder-js-project"
-                                                    ? "work/webdev1.svg"
-                                                    : projectCategory ===
-                                                      ("react-project" ||
-                                                          "big-project")
-                                                    ? "work/react.svg"
-                                                    : "work/javascript.svg"
-                                            }
-                                            imageDescription={projectTitle}
+                                            key={id}
+                                            id={id}
+                                            projectTitle={name}
+                                            projectPreview={homepage}
+                                            projectCode={html_url}
+                                            projectLanguage={language}
+                                            projectDescription={description}
                                         />
                                     </Suspense>
                                 );
-                            else return null;
-                        })}
+                            })}
                     </div>
                 </>
             ) : null}
