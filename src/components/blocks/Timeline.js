@@ -1,20 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import axios from "axios";
-import ReactHtmlParser from "react-html-parser";
 
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import Icon from "./universal/Icon";
-import Button from "./universal/Button";
+import Loading from "./universal/Loading";
 import BlockHeading from "./heading/BlockHeading";
 
 import config from "../../config/config";
 import { paths } from "../../config/names";
+
+const TimelineElement = React.lazy(() => import("./boxes/TimelineElement"));
 
 const { SERVER_URL } = config;
 const { timeline } = paths;
@@ -61,60 +58,21 @@ export default function Timeline() {
                         category,
                     } = element;
 
-                    let showButton =
-                        buttonText !== undefined &&
-                        buttonText !== null &&
-                        buttonText !== "";
-
-                    const iconClassName = `timeline__icon ${
-                        category === "work"
-                            ? "timeline__icon--work"
-                            : category === "education"
-                            ? "timeline__icon--education"
-                            : "timeline__icon--fantasy"
-                    }`;
-
-                    const buttonClassName = `button timeline__button ${
-                        category === "work"
-                            ? "timeline__button--work"
-                            : category === "education"
-                            ? "timeline__button--education"
-                            : "timeline__button--fantasy"
-                    } `;
-
                     return (
-                        <VerticalTimelineElement
-                            key={_id}
-                            date={date}
-                            dateClassName="timeline__date"
-                            iconClassName={iconClassName}
-                            icon={
-                                <Icon icon={icon} className="timeline__icon" />
-                            }
-                        >
-                            <h3 className="vertical-timeline-element-title timeline__title">
-                                {title}
-                            </h3>
-                            <h5 className="vertical-timeline-element-subtitle timeline__subtitle">
-                                {site ? (
-                                    <a href={site}>{location}</a>
-                                ) : (
-                                    location
-                                )}
-                            </h5>
-                            <p id="description timeline__description">
-                                {ReactHtmlParser(description)}
-                            </p>
-                            {showButton && (
-                                <Button
-                                    className={buttonClassName}
-                                    href={site}
-                                    text={buttonText}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                />
-                            )}
-                        </VerticalTimelineElement>
+                        <Suspense fallback={<Loading />} key={_id}>
+                            <TimelineElement
+                                key={_id}
+                                id={_id}
+                                category={category}
+                                date={date}
+                                icon={icon}
+                                title={title}
+                                site={site}
+                                location={location}
+                                description={description}
+                                buttonText={buttonText}
+                            />
+                        </Suspense>
                     );
                 })}
             </VerticalTimeline>
