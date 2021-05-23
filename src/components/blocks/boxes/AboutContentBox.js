@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import ReactHtmlParser from "react-html-parser";
 
-import Image from "../universal/Image";
+import Loading from "../universal/Loading";
+
+const Image = React.lazy(() => import("../universal/Image"));
 
 export default function AboutContentBox(props) {
     const [isHidden, setVisibility] = useState(false);
@@ -43,12 +45,14 @@ export default function AboutContentBox(props) {
         return (
             <div className="about__image">
                 {imagePath ? (
-                    <Image
-                        imagePath={imagePath}
-                        imageDescription={
-                            imageDescription ? imageDescription : "img"
-                        }
-                    />
+                    <Suspense fallback={<Loading />}>
+                        <Image
+                            imagePath={imagePath}
+                            imageDescription={
+                                imageDescription ? imageDescription : "img"
+                            }
+                        />
+                    </Suspense>
                 ) : null}
             </div>
         );
