@@ -3,17 +3,23 @@ import React from "react";
 import Button from "../universal/Button";
 import Image from "../universal/Image";
 
-import config from "../../../config/config";
-const { GITHUB_URL, PROJECTS_ROOT_URL } = config;
-
 export default function WorkListElement(props) {
     const {
         projectTitle,
         projectPreview,
         projectCode,
-        imagePath,
-        imageDescription,
+        projectLanguage,
+        projectDescription,
     } = props;
+
+    const imagePath =
+        projectLanguage === "HTML"
+            ? "work/webdev2.svg"
+            : projectLanguage === "CSS"
+            ? "work/webdev1.svg"
+            : projectLanguage === "JavaScript"
+            ? "work/javascript.svg"
+            : "work/website.svg";
 
     return (
         <section className="work-box work-box--more">
@@ -21,19 +27,24 @@ export default function WorkListElement(props) {
             <Image
                 imageClass="work-box__image"
                 imagePath={imagePath}
-                imageDescription={imageDescription}
+                imageDescription={projectDescription}
             />
+            <h5 className="work-box__description">{projectDescription}</h5>
             <div className="work-box__buttons">
                 <Button
                     className="button button--work"
-                    href={`${GITHUB_URL}${projectCode}`}
+                    href={projectCode}
                     text="Kod"
+                    target="_blank"
+                    rel="noreferrer"
                 />
                 {projectPreview ? (
                     <Button
                         className="button button--work"
-                        href={`${PROJECTS_ROOT_URL}${projectCode}`}
+                        href={projectPreview}
                         text="Demo"
+                        target="_blank"
+                        rel="noreferrer"
                     />
                 ) : null}
             </div>

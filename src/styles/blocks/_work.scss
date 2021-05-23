@@ -66,6 +66,21 @@
         }
     }
 
+    &__description {
+        position: relative;
+        background: $red-color;
+        display: inline-block;
+        color: $light-color;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: normal;
+
+        @media (max-width: map-get($map: $breakpoints, $key: medium)) {
+            display: none;
+        }
+    }
+
     &__buttons {
         display: flex;
     }
