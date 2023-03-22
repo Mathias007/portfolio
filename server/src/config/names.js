@@ -1,13 +1,13 @@
-const prefix = "portfolio";
+export const database = "portfolio";
 
 export const collections = {
-    root: prefix,
-    about: `${prefix}_about`,
-    contact: `${prefix}_contact`,
-    projects: `${prefix}_projects`,
-    quotes: `${prefix}_quotes`,
-    technologies: `${prefix}_technologies`,
-    timeline: `${prefix}_timeline`,
+    root: database,
+    about: `${database}_about`,
+    contact: `${database}_contact`,
+    projects: `${database}_projects`,
+    quotes: `${database}_quotes`,
+    technologies: `${database}_technologies`,
+    timeline: `${database}_timeline`,
 };
 
 export const paths = {

@@ -29,7 +29,7 @@ export default function Services() {
         return () => {
             setDataLoading(false);
         };
-    }, [technologiesData, dataLoading]);
+    }, [dataLoading]);
 
     return (
         <article className="portfolio__block services" id="services">

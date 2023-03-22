@@ -31,7 +31,7 @@ export default function About() {
         return () => {
             setDataLoading(false);
         };
-    }, [aboutData, dataLoading]);
+    }, [dataLoading]);
 
     return (
         <article className="portfolio__block about" id="about">

@@ -43,7 +43,7 @@ export default function Work() {
         return () => {
             setDataLoading(false);
         };
-    }, [projectsData, dataLoading]);
+    }, [dataLoading]);
 
     const toggleProjectsVisibility = () => {
         setActive(!isActive);

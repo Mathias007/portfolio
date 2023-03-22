@@ -30,7 +30,7 @@ export default function Contact() {
         return () => {
             setDataLoading(false);
         };
-    }, [contactData, dataLoading]);
+    }, [dataLoading]);
 
     return (
         <article className="portfolio__block contact" id="contact">

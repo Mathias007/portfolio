@@ -35,7 +35,7 @@ export default function Timeline() {
         return () => {
             setDataLoading(false);
         };
-    }, [timelineData, dataLoading]);
+    }, [dataLoading]);
 
     return (
         <article className="portfolio__block timeline" id="timeline">

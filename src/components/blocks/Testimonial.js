@@ -29,7 +29,7 @@ export default function Testimonial() {
         return () => {
             setDataLoading(false);
         };
-    }, [quotesData, dataLoading]);
+    }, [dataLoading]);
 
     return (
         <article className="portfolio__block testimonial" id="testimonial">

@@ -8,16 +8,17 @@ import {
     DATABASE_CONNECTION_ERROR_MESSAGE,
     PORT_LISTENING_START_MESSAGE,
 } from "./config/messages";
-import { paths } from "./config/names";
+import { database, paths } from "./config/names";
 import config from "./config/config";
 
 const { root } = paths;
-const { NODE_PORT, MONGO_URI } = config;
+const { NODE_PORT, MONGO_URI, CORS_ORIGIN } = config;
 
 const app = express();
 
+// Before build remove env cors origin (localhost) and use proper client url
 const corsOptions = {
-    origin: "https://mathias.net.pl",
+    origin: CORS_ORIGIN,
 };
 app.use(cors(corsOptions));
 
@@ -26,6 +27,7 @@ mongoose
         useCreateIndex: true,
         useUnifiedTopology: true,
         useNewUrlParser: true,
+        dbName: database
     })
     .catch((err) => console.log(DATABASE_CONNECTION_ERROR_MESSAGE(err)));
 
