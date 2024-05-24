@@ -7,7 +7,7 @@ Celem projektu jest utworzenie profesjonalnej strony autobiograficznej, zawieraj
 Zarówno etapowy sposób tworzenia projektu, jak i wykorzystywane języki, biblioteki i rozwiązania mają charakter podsumowujący dotychczasowe efekty nauki programowania. Dodatkowo portfolio powinno być reużywalne, tj. zdatne do wykorzystania także przez inne osoby do tworzenia własnych stron-wizytówek, jak również przydatne przy tworzeniu innych projektów z uwagi na zastosowanie odpowiednich praktyk programistycznych.
 
 ## Finalizacja projektu (v. 1.0.0).
-W dniu ***23 maja 2021 r.***, tuż przed moimi 26. urodzinami, w internecie zawitała końcowa wersja projektu portfolio (1.0.0). Została umieszczona pod adresem [mathias.net.pl](https://mathias.net.pl), posiadającym **certyfikat SSL**. 
+W dniu ***23 maja 2021 r.***, tuż przed moimi 26. urodzinami, w internecie zawitała końcowa wersja projektu portfolio (1.0.0). Obecnie znajduje się pod adresem [mathias.egildia.pl](https://mathias.egildia.pl), posiadającym **certyfikat SSL**. 
 
 Finalnie wyszła z tego pełnoprawna fullstackowa aplikacja, implementująca między innymi **React** z **SCSS** po stronie frontendu (w tym wiele ciekawych bibliotek, wymienionych w pliku package.json oraz harmonogramie projektu poniżej) oraz **Express** i **MongoDB** w backendzie. Udało się także znaleźć - jak myślę - fajne zastosowanie dla **Github API** w sekcji poświęconej projektom.
 
